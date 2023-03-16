@@ -2,12 +2,12 @@ version: "3.9"
 
 services:
   web:
-    build: ./aipm
+    build: ./aipm_web
     ports:
       - 80:3000
 
   api:
-    build: ./aipm_backend
+    build: ./aipm_api
     ports:
       - 3001:3001
   
