@@ -4,7 +4,9 @@ import {
   Typography,
   Grid,
   CircularProgress,
+  Button,
 } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 import { DEEP_BLUE_COLOR } from "../../utils/constants/colors";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -67,6 +69,11 @@ const StaffMemberDetail = () => {
 
   const memberState = useSelector((state) => state.staffMember);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate('/staff-board-members', {replace: true}, [navigate]);
+  }
 
   const items = [
     {
@@ -575,6 +582,9 @@ const StaffMemberDetail = () => {
                     {memberState.gender === "Male" ? "His" : "Her"} Passion
                   </Typography>
                   <Typography variant="body2">{memberState.passion}</Typography>
+                </div>
+                <div>
+                  <Button variant="contained" onClick={handleBackClick}>Back</Button>
                 </div>
               </div>
             </>
