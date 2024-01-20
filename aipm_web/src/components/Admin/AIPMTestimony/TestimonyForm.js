@@ -11,7 +11,6 @@ import {
   InputLabel,
   Select,
   Icon,
-  MenuItem,
   CircularProgress,
 } from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
