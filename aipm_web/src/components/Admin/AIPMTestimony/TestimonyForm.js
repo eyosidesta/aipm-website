@@ -8,7 +8,6 @@ import {
   useMediaQuery,
   useTheme,
   FormControl,
-  InputLabel,
   Select,
   Icon,
   CircularProgress,
