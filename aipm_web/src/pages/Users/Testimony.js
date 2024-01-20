@@ -7,8 +7,6 @@ import {
 } from "@material-ui/core";
 import { DEEP_BLUE_COLOR } from "../../utils/constants/colors";
 import { useSelector, useDispatch } from "react-redux";
-import { getTestimonies } from "../../utils/ApiService/testimony.api";
-import { getTestimoniesAction } from "../../store/actions";
 import backgroundImage from "../../assets/testimony_image.png";
 import CardContainer from "../../components/Users/Testimony/CardContainer";
 import ImageWithTextCenter from "../../components/Shared/ImageWithTextCenter";
