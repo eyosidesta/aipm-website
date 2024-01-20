@@ -148,8 +148,6 @@ function Home() {
           Missionaries supported by AIPM serve in unreached areas of Ethiopia.
           In addition, we give support to a few missionaries serving in India,
           Pakistan and South Sudan.
-          {/* </Typography>
-        <Typography variant="body2"> */}
           This movement got its name, Ambaricho International Prayer and
           Missions Movement (AIPM) because of its focus on prayer for revival
           and renewal of existing churches
