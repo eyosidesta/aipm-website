@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
   },
   imageContainer: {
     position: "relative",
-    // textAlign: "center",
     color: WHITE_COLOR,
   },
   aipmText: {
