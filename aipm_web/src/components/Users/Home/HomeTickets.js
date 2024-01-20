@@ -2,7 +2,6 @@ import React from "react";
 import {
   Grid,
   makeStyles,
-  Typography,
   Container,
 } from "@material-ui/core";
 import TicketContainer from "./TicketContainer";
