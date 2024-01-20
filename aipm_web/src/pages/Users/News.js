@@ -146,15 +146,6 @@ const News = () => {
     },
   ];
   const fetchNews = async () => {
-    // setIsLoading(true);
-    // const res = await getNews();
-    // setIsLoading(false);
-    // dispatch({
-    //     type: "GET_NEWS",
-    //     payload: res
-    // })
-    // dispatch(getNewsAction(res.data.data));
-    // setData(res.data.data.slice(0, 3))
     dispatch(getNewsAction(items));
     setData(items.slice(0, 3))
   };
