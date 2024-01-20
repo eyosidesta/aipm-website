@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, Typography, Grid, Icon } from "@material-ui/core";
+import { makeStyles, Typography, Grid } from "@material-ui/core";
 import { DEEP_BLUE_COLOR } from "../../utils/constants/colors";
 import ContactUsGrid from "../../components/Users/ContactUs/ContactUsGrid";
 
