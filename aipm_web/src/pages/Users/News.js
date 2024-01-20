@@ -4,7 +4,6 @@ import { Pagination } from "@material-ui/lab";
 import { makeStyles, CircularProgress } from "@material-ui/core";
 import { getNews } from "../../utils/ApiService/news.api";
 import { getNewsAction } from "../../store/actions/index";
-import NEWS_IMAGE from "../../assets/home_img.JPG";
 import backgroundImage from "../../assets/home_image_two.jpg";
 import ImageWithTextCenter from "../../components/Shared/ImageWithTextCenter";
 import newsImageOne from "../../assets/news_image_one.png";
