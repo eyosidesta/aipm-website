@@ -7,7 +7,6 @@ import {
   TextField,
   useMediaQuery,
   useTheme,
-  FormControl,
   Select,
   Icon,
   CircularProgress,
