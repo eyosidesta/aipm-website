@@ -44,12 +44,6 @@ const SideNav = () => {
             // console.log("university students ", 5)
           },
         },
-        // {
-        //   id: 6,
-        //   title: "AIPM Projects",
-        //   url: "/aipm-projects",
-        //   onClick: () => console.log("wow kasu onclick ", 6),
-        // },
         {
           id: 7,
           title: "AIPM Staffs",
