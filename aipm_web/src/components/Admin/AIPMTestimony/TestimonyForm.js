@@ -7,7 +7,6 @@ import {
   TextField,
   useMediaQuery,
   useTheme,
-  Select,
   Icon,
   CircularProgress,
 } from "@material-ui/core";
