@@ -2,7 +2,6 @@ import React from "react";
 import {
   Grid,
   makeStyles,
-  Paper,
   Typography,
   Container,
 } from "@material-ui/core";
