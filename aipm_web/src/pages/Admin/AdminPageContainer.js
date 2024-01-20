@@ -2,8 +2,6 @@ import React from "react";
 import {
   Grid,
   makeStyles,
-  useTheme,
-  useMediaQuery,
 } from "@material-ui/core";
 import { Routes, Route } from "react-router-dom";
 import AddAdmin from "./AddAdmin";
