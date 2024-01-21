@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles, Typography, useTheme } from "@material-ui/core";
 import { DEEP_BLUE_COLOR, WHITE_COLOR } from "../../utils/constants/colors";
 import backgroundImage from "../../assets/ambaricho_mount.png";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   root: {
