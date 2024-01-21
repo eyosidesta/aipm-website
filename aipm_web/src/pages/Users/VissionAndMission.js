@@ -90,21 +90,6 @@ const VissionAndMission = () => {
             : textMediaQueryCss.extraLargeCss
         }
       >
-        <Grid container>
-          <Grid item xs={12}>
-            <Grid container justifyContent="center" spacing={2}>
-              <Grid item>
-                <Typography>Preaching the Gosple</Typography>
-              </Grid>
-              <Grid item>
-                <Typography>Church Plantingt</Typography>
-              </Grid>
-              <Grid item>
-                <Typography>Making Discipleship</Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
       </div> */}
       <div className={classes.detailsContainer}>
         <Typography variant="h6" className={classes.title}>Vision</Typography>
