@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
 
 const VissionAndMission = () => {
   const classes = useStyles();
-  const theme = useTheme();
 
   const textMediaQueryCss = {
     extraSmallCss: {
