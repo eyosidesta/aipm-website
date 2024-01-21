@@ -84,7 +84,6 @@ const VissionAndMission = () => {
   };
   return (
     <div className={classes.root}>
-      {/* <ImageWithTextCenter styles={styles} /> */}
       {/* <div
         className={classes.textImageBottom}
         style={
