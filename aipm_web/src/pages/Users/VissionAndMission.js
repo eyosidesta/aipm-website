@@ -71,7 +71,6 @@ const VissionAndMission = () => {
   };
 
   const styles = {
-    height: 60,
     backgroundImage: backgroundImage,
     title: "AIPM News",
     detail: {
