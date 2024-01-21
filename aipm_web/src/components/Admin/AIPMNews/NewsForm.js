@@ -157,12 +157,7 @@ const NewsForm = ({ data, setEditMode }) => {
           }
           if (!values.detail) {
             errors.detail = "description is required";
-          } 
-          // else if (
-          //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.detail)
-          // ) {
-          //   errors.detail = "Invalid email address";
-          // }
+          }
 
           return errors;
         }}
