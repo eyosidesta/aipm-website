@@ -11,7 +11,6 @@ import {
 } from "../../utils/ApiService/staff.members";
 import {
   getStaffMembersAction,
-  getStaffMemberAction,
 } from "../../store/actions";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
