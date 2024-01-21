@@ -44,7 +44,6 @@ const VissionAndMission = () => {
   const theme = useTheme();
   const small = useMediaQuery(theme.breakpoints.down("sm"));
   const medium = useMediaQuery(theme.breakpoints.down("md"));
-  const large = useMediaQuery(theme.breakpoints.down("lg"));
 
   const textMediaQueryCss = {
     extraSmallCss: {
