@@ -76,21 +76,6 @@ const VissionAndMission = () => {
   };
   return (
     <div className={classes.root}>
-      {/* <div
-        className={classes.textImageBottom}
-        style={
-          extraSmall
-            ? textMediaQueryCss.extraSmallCss
-            : small
-            ? textMediaQueryCss.smallCss
-            : medium
-            ? textMediaQueryCss.mediumCss
-            : large
-            ? textMediaQueryCss.largeCss
-            : textMediaQueryCss.extraLargeCss
-        }
-      >
-      </div> */}
       <div className={classes.detailsContainer}>
         <Typography variant="h6" className={classes.title}>Vision</Typography>
         <Typography variant="body2" className={classes.descriptionTwo}>
