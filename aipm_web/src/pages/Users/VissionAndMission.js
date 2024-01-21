@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
 const VissionAndMission = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const extraSmall = useMediaQuery(theme.breakpoints.down("xs"));
   const small = useMediaQuery(theme.breakpoints.down("sm"));
   const medium = useMediaQuery(theme.breakpoints.down("md"));
   const large = useMediaQuery(theme.breakpoints.down("lg"));
