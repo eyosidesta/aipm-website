@@ -8,7 +8,6 @@ import {
 } from "@material-ui/core";
 import {
   getStaffMembers,
-  getStaffMember,
 } from "../../utils/ApiService/staff.members";
 import {
   getStaffMembersAction,
