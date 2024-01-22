@@ -4,7 +4,6 @@ import {
   Typography,
   IconButton,
   Dialog,
-  Button,
   makeStyles,
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
