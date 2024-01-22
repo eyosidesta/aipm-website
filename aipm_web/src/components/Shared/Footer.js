@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
   },
   footerDetailContainer: {
     textAlign: "center",
-    // paddingLeft: 40,
   },
   footerDetail: {
     alignItems: "center",
