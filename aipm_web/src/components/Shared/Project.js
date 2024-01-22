@@ -3,7 +3,6 @@ import {
   makeStyles,
   Typography,
   Grid,
-  Link,
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
