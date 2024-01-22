@@ -126,7 +126,6 @@ const Project = ({ data }) => {
           width: "80%",
           paddingLeft: extraSmall ? "15%" : "25%",
           paddringRight: extraSmall ? "15%" : "25%",
-          // textAlign: "center"
         }}
       >
         <Grid item xs={12} sm>
