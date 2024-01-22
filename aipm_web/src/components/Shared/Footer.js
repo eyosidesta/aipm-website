@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
   },
   footerDetailContainer: {
-    // backgroundColor: "red",
     textAlign: "center",
     // paddingLeft: 40,
   },
