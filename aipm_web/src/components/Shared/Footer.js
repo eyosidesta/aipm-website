@@ -3,7 +3,6 @@ import {
   Divider,
   Grid,
   makeStyles,
-  Paper,
   Typography,
 } from "@material-ui/core";
 import { FOOTER_COLOR, FOOTER_TEXT_COLOR } from "../../utils/constants/colors";
