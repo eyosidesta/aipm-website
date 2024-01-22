@@ -144,7 +144,6 @@ const Project = ({ data }) => {
               <Typography variant="body2" className={classes.bankName}>
                 {data.payOnline}?
               </Typography>
-              {/* <Link variant="body2" onClick={handlePayLink} className={classes.payLink} target="_blandk">{data.payLink}</Link> */}
               <a href="https://www.aipmusa.com/support/" target="_blank">
                 Click here
               </a>
