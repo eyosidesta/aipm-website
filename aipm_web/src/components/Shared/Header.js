@@ -148,7 +148,6 @@ function Header() {
         spacing={2}
         style={{ margin: 0, width: "100%" }}
       >
-        {/* <Grid > */}
         <Grid item style={{cursor: "pointer"}} onClick={handleHomeNavigation}>
           <Avatar alt="AIPM" src={aipm_logo} />
         </Grid>
