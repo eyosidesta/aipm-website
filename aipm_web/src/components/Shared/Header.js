@@ -160,7 +160,6 @@ function Header() {
               and Prayer Movement
             </Typography>
           </Grid>
-          {/* </Grid> */}
         <Grid container item sm xs={12}>
           <Grid
             container
