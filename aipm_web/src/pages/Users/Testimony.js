@@ -180,12 +180,7 @@ const Testimony = () => {
     // dispatch(getTestimoniesAction(res.data));
     // setData(items.slice(0, 3));
   };
-
-  const count =
-    items.length / 3 - parseInt(items.length / 3) !== 0
-      ? parseInt(items.length / 3) + 1
-      : parseInt(items.length / 3);
-
+  
   const theme = useTheme();
   const extraSmall = useMediaQuery(theme.breakpoints.down("xs"));
   const small = useMediaQuery(theme.breakpoints.down("sm"));
