@@ -181,9 +181,6 @@ const Testimony = () => {
     // setData(items.slice(0, 3));
   };
 
-  const handleChange = (event, value) => {
-    setData(items.slice((value - 1) * 3, value * 3));
-  };
   const count =
     items.length / 3 - parseInt(items.length / 3) !== 0
       ? parseInt(items.length / 3) + 1
