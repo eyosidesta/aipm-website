@@ -6,7 +6,6 @@ import {
   useTheme,
 } from "@material-ui/core";
 import { DEEP_BLUE_COLOR } from "../../utils/constants/colors";
-import { useSelector, useDispatch } from "react-redux";
 import backgroundImage from "../../assets/testimony_image.png";
 import CardContainer from "../../components/Users/Testimony/CardContainer";
 import ImageWithTextCenter from "../../components/Shared/ImageWithTextCenter";
