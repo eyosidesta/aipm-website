@@ -166,19 +166,6 @@ const Testimony = () => {
   // const [data, setData] = useState(items ? items.slice(0, 3) : []);
   const [data, setData] = useState(items ? items.slice(0, 3) : []);
 
-  useEffect(() => {
-    fetchTestimonies();
-  }, []);
-  const fetchTestimonies = async () => {
-    // setIsLoading(true);
-    // const res = await getTestimonies();
-    // setData(res.data.data)
-    // setIsLoading(false);
-    // dispatch(getTestimoniesAction(res.data.data));
-    // dispatch(getTestimoniesAction(res.data));
-    // setData(items.slice(0, 3));
-  };
-
   const theme = useTheme();
   const extraSmall = useMediaQuery(theme.breakpoints.down("xs"));
   const small = useMediaQuery(theme.breakpoints.down("sm"));
