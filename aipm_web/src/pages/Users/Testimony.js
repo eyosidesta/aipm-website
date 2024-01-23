@@ -166,7 +166,6 @@ const Testimony = () => {
   // const [data, setData] = useState(items ? items.slice(0, 3) : []);
   const [data, setData] = useState(items ? items.slice(0, 3) : []);
   const dispatch = useDispatch();
-  const testimoniesState = useSelector((state) => state.testimonies);
 
   useEffect(() => {
     fetchTestimonies();
@@ -180,7 +179,7 @@ const Testimony = () => {
     // dispatch(getTestimoniesAction(res.data));
     // setData(items.slice(0, 3));
   };
-  
+
   const theme = useTheme();
   const extraSmall = useMediaQuery(theme.breakpoints.down("xs"));
   const small = useMediaQuery(theme.breakpoints.down("sm"));
