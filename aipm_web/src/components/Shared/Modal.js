@@ -99,7 +99,6 @@ const Modals = ({modalData,open, setOpen }) => {
         </DialogContent>
         {/*
           <Button autoFocus onClick={handleClose} color="primary">
-            Save Changes
           </Button> */}
       </Dialog>
     </div>
