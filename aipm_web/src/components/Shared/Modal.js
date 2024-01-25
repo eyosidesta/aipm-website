@@ -97,11 +97,10 @@ const Modals = ({modalData,open, setOpen }) => {
             </Grid>
           </div>
         </DialogContent>
-        {/* <DialogActions>
+        {/*
           <Button autoFocus onClick={handleClose} color="primary">
             Save Changes
-          </Button>
-        </DialogActions> */}
+          </Button> */}
       </Dialog>
     </div>
   );
