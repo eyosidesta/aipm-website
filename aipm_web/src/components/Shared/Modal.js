@@ -29,7 +29,6 @@ const useStyles =  makeStyles((theme) => ({
   contentContainer: {
     width: "98%",
     marginBottom: 10
-    // paddingLeft: 2,
   }
 }));
 
