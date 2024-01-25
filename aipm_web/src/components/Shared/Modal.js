@@ -97,9 +97,6 @@ const Modals = ({modalData,open, setOpen }) => {
             </Grid>
           </div>
         </DialogContent>
-        {/*
-          <Button autoFocus onClick={handleClose} color="primary">
-          </Button> */}
       </Dialog>
     </div>
   );
