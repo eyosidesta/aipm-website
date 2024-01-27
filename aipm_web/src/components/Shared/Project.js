@@ -76,15 +76,6 @@ const Project = ({ data }) => {
       </Typography>
       {/* <div
         className={classes.image}
-        style={{
-          paddingLeft: extraSmall
-            ? "5%"
-            : small
-            ? "20%"
-            : medium
-            ? "25%"
-            : "25%",
-        }}
       >
       </div> */}
       <Grid container className={classes.imageContainer}>
