@@ -65,7 +65,7 @@ const NewsList = () => {
     },
     {
       id: 3,
-      title: "Training for AIPM Missionaries",
+      title: "Training for AIPM Missionaries at Durame, Jan 21, 2024",
       detail: `During the 2nd week of October 2021, AIPM held its annual Missions 
       Conference in Durame. This year we also hosted 100 university students and
       a few high school students that are very interested in serving the Lord as 
