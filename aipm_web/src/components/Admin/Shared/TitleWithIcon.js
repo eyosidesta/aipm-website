@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center"
   },
   dropDownIcon: {
-    // paddingTop: 2,
     alignItems: "center",
     paddingLeft: 10,
   },
