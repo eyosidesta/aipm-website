@@ -25,9 +25,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Cards = ({data}) => {
     const classes = useStyles();
-    // const handleToggle = () => {
-    //     {data.handleCardClick}
-    // }
     return (
         <Card className={classes.root}>
             <CardActionArea>
