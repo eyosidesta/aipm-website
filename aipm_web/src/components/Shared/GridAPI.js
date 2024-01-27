@@ -39,7 +39,6 @@ function GridAPI({ listItem, handleToggle }) {
     handleToggle(listItem);
     setMenuOpen(!menuOpen);
     setAnchorEl(event.currentTarget);
-    // setOpen((prevOpen) => !prevOpen)
   };
   const handleClose = () => {
     setMenuOpen(false);
