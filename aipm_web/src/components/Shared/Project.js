@@ -86,7 +86,6 @@ const Project = ({ data }) => {
             : "25%",
         }}
       >
-        <img src={data.projectImage} className={classes.image} />
       </div> */}
       <Grid container className={classes.imageContainer}>
         <Grid item>
