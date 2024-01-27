@@ -74,10 +74,6 @@ const Project = ({ data }) => {
       <Typography variant="h6" className={classes.title}>
         {data.title}
       </Typography>
-      {/* <div
-        className={classes.image}
-      >
-      </div> */}
       <Grid container className={classes.imageContainer}>
         <Grid item>
         <img src={data.projectImage} className={classes.image} />
