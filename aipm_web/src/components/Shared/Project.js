@@ -64,7 +64,6 @@ const Project = ({ data }) => {
   const theme = useTheme();
   const extraSmall = useMediaQuery(theme.breakpoints.down("xs"));
   const small = useMediaQuery(theme.breakpoints.down("sm"));
-  const medium = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <div className={classes.root}>
