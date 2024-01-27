@@ -66,9 +66,6 @@ const Project = ({ data }) => {
   const small = useMediaQuery(theme.breakpoints.down("sm"));
   const medium = useMediaQuery(theme.breakpoints.down("md"));
 
-  const handlePayLink = () => {
-    navigate("/news", { replace: true }, [navigate]);
-  };
   return (
     <div className={classes.root}>
       <Typography variant="h6" className={classes.title}>
