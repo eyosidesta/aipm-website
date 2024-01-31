@@ -109,7 +109,6 @@ const MissionMovement = () => {
           Justin is a bord member from AIPM USA. The following is the report
           from both Dr. Desta and Justin.
         </Typography>
-        <div className={classes.detailOne}>
         <Typography className={classes.firstParagraph}>
           During the 2nd week of October 2021, AIPM held its annual Missions
           Conference in Durame. This year we also hosted 100 university students
@@ -125,7 +124,6 @@ const MissionMovement = () => {
           Justin is a bord member from AIPM USA. The following is the report
           from both Dr. Desta and Justin.
         </Typography>
-        </div>
       </div>
     </div>
   );
