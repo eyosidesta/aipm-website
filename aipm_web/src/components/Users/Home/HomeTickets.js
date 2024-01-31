@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     paddingLeft: 30,
     paddingRight: 30
-    // marginLeft: 20,
   },
   container: {
     margin: 0,
