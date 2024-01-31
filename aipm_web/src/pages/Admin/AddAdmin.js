@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
-import { DEEP_BLUE_COLOR, WHITE_COLOR } from "../../utils/constants/colors";
+import { DEEP_BLUE_COLOR } from "../../utils/constants/colors";
 import AdminForm from "../../components/Admin/AddAdmin/AdminForm";
 import AdminList from "../../components/Admin/AddAdmin/AdminList";
 import TitleWithIcon from "../../components/Admin/Shared/TitleWithIcon";
