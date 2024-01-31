@@ -1,7 +1,6 @@
 import React from "react";
 import {makeStyles, Card, CardActionArea, CardContent, CardMedia, Typography } from "@material-ui/core";
 import { CARD_COLOR, DEEP_BLUE_COLOR } from "../../utils/constants/colors";
-import contentImage from "../../assets/prayer_image.png";
 
 const useStyles = makeStyles((theme) => ({
     root: {
