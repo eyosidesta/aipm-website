@@ -2,7 +2,7 @@ import React from "react";
 
 const WhoWeAreCard = () => {
     return (
-        <div></div>
+        <div>Who We Are Card - In Progress...</div>
     )
 }
 export default WhoWeAreCard;
