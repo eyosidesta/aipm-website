@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 200,
         color: DEEP_BLUE_COLOR,
         backgroundColor: CARD_COLOR
-        // textAlign: "end"
     },
     media: {
         height: 150,
