@@ -32,7 +32,7 @@ const Cards = ({data}) => {
                     image={data.imageUrl}
                 />
                 <CardContent>
-                    <Typography variant="h6" className={classes.title}>{data.name}</Typography>
+                    <Typography variant="h6">{data.name}</Typography>
                     <Typography variant="body2">{data.servicePlace}</Typography>
                     {data.place && <Typography variant="caption">{data.place}</Typography> }
                     <Typography className={classes.button}>{data.action}</Typography>
