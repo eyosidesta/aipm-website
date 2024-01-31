@@ -13,9 +13,6 @@ const useStyles = makeStyles((theme) => ({
         height: 150,
         textAlign: "start"
     },
-    title: {
-        // paddingLeft: -10
-    },
     button: {
         textAlign: "end",
         width: "100%",
