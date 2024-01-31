@@ -31,8 +31,6 @@ const ImageWithTextCenter = ({ styles }) => {
     <div className={classes.imageContainer}>
       <div><img
         style={{
-          // borderRadius: styles.borderRadius,
-          // borderBottomLeftRadius: styles.borderRadius,
           maxHeight: `${styles.height}vh`,
           paddingLeft: `${(100 - styles.width) / 2}%`,
           width: `${styles.width}%`,
