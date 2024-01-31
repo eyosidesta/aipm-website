@@ -1,5 +1,5 @@
 import React from "react";
-import {makeStyles, Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from "@material-ui/core";
+import {makeStyles, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@material-ui/core";
 import { CARD_COLOR, DEEP_BLUE_COLOR } from "../../utils/constants/colors";
 import contentImage from "../../assets/prayer_image.png";
 
