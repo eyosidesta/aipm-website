@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ImageWithTextCenter = ({ styles }) => {
-  // const three = "75"
   const classes = useStyles();
   return (
     <div className={classes.imageContainer}>
