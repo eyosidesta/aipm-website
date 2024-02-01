@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
         },
       },
       package: {
-          // justifyContent: "center",
           gap: 10,
           paddingLeft: 80,
       },
