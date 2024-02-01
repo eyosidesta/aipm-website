@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, makeStyles, Typography, useTheme, useMediaQuery } from "@material-ui/core";
 import { WHITE_COLOR } from "../../../utils/constants/colors";
 import { ArrowDropDown, ArrowDropUp } from "@material-ui/icons";
