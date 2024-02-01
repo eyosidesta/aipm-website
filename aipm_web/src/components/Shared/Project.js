@@ -59,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Project = ({ data }) => {
   const classes = useStyles();
-  const navigate = useNavigate();
 
   const theme = useTheme();
   const extraSmall = useMediaQuery(theme.breakpoints.down("xs"));
