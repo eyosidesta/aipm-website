@@ -162,7 +162,6 @@ const Testimony = () => {
   };
 
   const [isLoading, setIsLoading] = useState(false);
-  // const [data, setData] = useState(items ? items.slice(0, 3) : []);
   const [data, setData] = useState(items ? items.slice(0, 3) : []);
 
   const theme = useTheme();
