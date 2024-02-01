@@ -6,7 +6,6 @@ import {
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
-import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
