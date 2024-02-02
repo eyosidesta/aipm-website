@@ -30,7 +30,6 @@ const SideNav = () => {
           title: "News",
           url: "/news",
           onClick: () => {
-            // console.log("news ", 4),
           },
         },
         {
