@@ -16,7 +16,6 @@ const SideNav = () => {
           title: "Add Admin",
           url: "/add-admin",
           onClick: () => {
-            // console.log("admin ", 2),
           }
         },
         {
