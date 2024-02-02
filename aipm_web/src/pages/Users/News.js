@@ -7,7 +7,6 @@ import backgroundImage from "../../assets/home_image_two.jpg";
 import ImageWithTextCenter from "../../components/Shared/ImageWithTextCenter";
 import newsImageOne from "../../assets/news_image_one.png";
 import newsImageFive from "../../assets/home_new_img.png";
-import newsImageFour from "../../assets/home_image_two.jpg";
 import newsImageSeven from "../../assets/AIPM_LOGO.png";
 import newsImageTwo from "../../assets/news_image_two.JPG";
 import newsImageThree from "../../assets/news_image_three.JPG";
