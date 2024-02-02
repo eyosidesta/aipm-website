@@ -9,7 +9,6 @@ const SideNav = () => {
           title: "Dashboard",
           url: "/",
           onClick: () => {
-            // console.log("dashboard ", 1),
           }
         },
         {
