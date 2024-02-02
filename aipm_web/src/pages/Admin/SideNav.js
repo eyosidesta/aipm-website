@@ -50,12 +50,6 @@ const SideNav = () => {
           url: "/aipm-staffs",
           onClick: () => console.log("wow kasu onclick ", 7),
         },
-        // {
-        //   id: 8,
-        //   title: "AIPM Missionaries",
-        //   url: "/aipm-missionaries",
-        //   onClick: () => console.log("wow kasu onclick ", 8),
-        // },
         {
           id: 10,
           title: "My Profile",
