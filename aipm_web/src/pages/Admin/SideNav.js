@@ -41,7 +41,6 @@ const SideNav = () => {
           title: "University Students",
           url: "/university-students",
           onClick: () => {
-            // console.log("university students ", 5)
           },
         },
         {
