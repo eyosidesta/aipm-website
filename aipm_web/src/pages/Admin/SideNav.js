@@ -23,7 +23,6 @@ const SideNav = () => {
           title: "Testimony",
           url: "/testimony",
           onClick: () => {
-            // console.log("testimony ", 3),
           }
         },
         {
