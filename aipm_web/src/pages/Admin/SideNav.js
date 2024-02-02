@@ -55,7 +55,6 @@ const SideNav = () => {
           title: "My Profile",
           url: "/my-profile",
           onClick: () => {
-            // console.log("my-profile ", 10),
           }
         },
       ];
