@@ -115,6 +115,15 @@ const VissionAndMission = () => {
           Profit Corporation in the United States, registered in the state of
           Indiana.
         </Typography>
+        <Typography variant="body2">
+          Ambaricho International Prayer and Mission Movement USA (AIPM USA), is
+          a partner with Ambaricho International Prayer and Mission Movement
+          (AIPM in Ethiopia, a dynamic grassroots movement of prayer and
+          missions outreach centered in Southern Ethiopia. AIPM USA is directed
+          by a Board of Directors which function as an Incorporated Not for
+          Profit Corporation in the United States, registered in the state of
+          Indiana.
+        </Typography>
       </div>
     </div>
   );
