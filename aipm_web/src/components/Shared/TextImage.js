@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, makeStyles, Container } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import ImageFirst from "./TextImageComponents/ImageFirst";
 import TextFirst from "./TextImageComponents/TextFirst";
 
