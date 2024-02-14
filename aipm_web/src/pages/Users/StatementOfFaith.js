@@ -59,6 +59,13 @@ const StatementOfFaith = () => {
           Prayer and Mission Movement USA (AIPM USA).
         </Typography>
         <Typography className={classes.listVal}>
+          3. The Ambaricho Prayer and Mission Movement (AIPM)s a Prayer and
+          Mission sending organization that is registered as a Non-Profit
+          Charitable Organization in Ethiopia. AIPM is also registered in the
+          United States as a 501 c3 Charitable Organization as the Ambaricho
+          Prayer and Mission Movement USA (AIPM USA).
+        </Typography>
+        <Typography className={classes.listVal}>
           4. The Ambaricho Prayer and Mission Movement (AIPM)s a Prayer and
           Mission sending organization that is registered as a Non-Profit
           Charitable Organization in Ethiopia. AIPM is also registered in the
@@ -67,13 +74,6 @@ const StatementOfFaith = () => {
         </Typography>
         <Typography className={classes.listVal}>
           5. The Ambaricho Prayer and Mission Movement (AIPM)s a Prayer and
-          Mission sending organization that is registered as a Non-Profit
-          Charitable Organization in Ethiopia. AIPM is also registered in the
-          United States as a 501 c3 Charitable Organization as the Ambaricho
-          Prayer and Mission Movement USA (AIPM USA).
-        </Typography>
-        <Typography className={classes.listVal}>
-          6. The Ambaricho Prayer and Mission Movement (AIPM)s a Prayer and
           Mission sending organization that is registered as a Non-Profit
           Charitable Organization in Ethiopia. AIPM is also registered in the
           United States as a 501 c3 Charitable Organization as the Ambaricho
