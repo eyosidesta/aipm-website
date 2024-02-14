@@ -115,7 +115,6 @@ const StatementOfFaith = () => {
           Prayer and Mission Movement USA (AIPM USA).
         </Typography>
       </div>
-      </div>
     </div>
   );
 };
