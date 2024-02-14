@@ -121,13 +121,6 @@ const StatementOfFaith = () => {
           United States as a 501 c3 Charitable Organization as the Ambaricho
           Prayer and Mission Movement USA (AIPM USA).
         </Typography>
-        <Typography className={classes.listVal}>
-          12. The Ambaricho Prayer and Mission Movement (AIPM)s a Prayer and
-          Mission sending organization that is registered as a Non-Profit
-          Charitable Organization in Ethiopia. AIPM is also registered in the
-          United States as a 501 c3 Charitable Organization as the Ambaricho
-          Prayer and Mission Movement USA (AIPM USA).
-        </Typography>
       </div>
     </div>
   );
