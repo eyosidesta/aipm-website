@@ -2,7 +2,9 @@ import React from "react";
 import { makeStyles, Typography } from "@material-ui/core";
 import { DEEP_BLUE_COLOR } from "../../utils/constants/colors";
 
+
 const useStyles = makeStyles((theme) => ({
+  
   root: {
     color: DEEP_BLUE_COLOR,
     marginTop: 30,
@@ -26,10 +28,13 @@ const useStyles = makeStyles((theme) => ({
   listVal: {
     marginBottom: 10,
   },
+
 }));
 
 const StatementOfFaith = () => {
+
   const classes = useStyles();
+  
   return (
     <div className={classes.root}>
       <Typography variant="h6" className={classes.statementText}>
