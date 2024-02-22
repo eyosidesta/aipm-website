@@ -43,7 +43,7 @@ const News = () => {
     setData(newsState.slice((value - 1) * 3, value * 3));
   };
   const count =
-  newsState.length / 3 - parseInt(newsState.length / 3) !== 0
+    newsState.length / 3 - parseInt(newsState.length / 3) !== 0
       ? parseInt(newsState.length / 3) + 1
       : parseInt(newsState.length / 3);
   const styles = {
@@ -118,11 +118,12 @@ const News = () => {
           and Justin Slemp. Justin is a bord member from AIPM USA. The following is the report from both Dr. Desta and Justin.`,
       imageUrl: `${newsImageSeven}`,
     },
-    
+
   ];
   const fetchNews = async () => {
     dispatch(getNewsAction(items));
     setData(items.slice(0, 3))
+    setIsLoading(false)
   };
   useEffect(() => {
     fetchNews();
