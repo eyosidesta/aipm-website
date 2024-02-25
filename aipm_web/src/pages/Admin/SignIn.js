@@ -14,7 +14,7 @@ import {
 import { DEEP_BLUE_COLOR, WHITE_COLOR } from "../../utils/constants/colors";
 import { signIn } from "../../utils/ApiService/sign.in";
 import { signInAction } from "../../store/actions";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import aipm_logo from "../../assets/AIPM_LOGO.png";
 import siginImage from "../../assets/adminPageImages/signInImage.png";
