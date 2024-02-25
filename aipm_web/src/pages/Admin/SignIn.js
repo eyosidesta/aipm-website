@@ -90,7 +90,6 @@ const SignIn = () => {
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [message, setMessage] = useState("Logged In Successful");
   const [type, setType] = useState("success");
-  const signInState = useSelector((state) => state.isLogged);
 
   const onEmailChange = (event) => {
     setEmail(event.target.value);
