@@ -3,7 +3,6 @@ import { makeStyles, Typography, CircularProgress } from "@material-ui/core";
 import { Pagination } from "@material-ui/lab";
 import { useDispatch, useSelector } from "react-redux";
 import { DEEP_BLUE_COLOR } from "../../utils/constants/colors";
-import { getUniversityStudentsMovements } from "../../utils/ApiService/university.students.movement";
 import newsImageFive from "../../assets/home_new_img.png";
 import newsImageFour from "../../assets/home_image_two.jpg";
 import newsImageSeven from "../../assets/AIPM_LOGO.png";
