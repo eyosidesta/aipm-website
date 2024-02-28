@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
   },
   textImageContainer: {
     marginTop: 30,
-    paddingLeft: "10%",
-    paddingRight: "10%"
+    paddingLeft: "11%",
+    paddingRight: "11%"
   },
   circularProgress: {
     textAlign: "center",
