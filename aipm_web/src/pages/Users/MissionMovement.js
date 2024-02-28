@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
   },
   missionText: {
     textAlign: "center",
-    marginTop: 40,
-    marginBottom: 50,
+    marginTop: 41,
+    marginBottom: 48,
   },
   detailOne: {
     marginBottom: 60,
