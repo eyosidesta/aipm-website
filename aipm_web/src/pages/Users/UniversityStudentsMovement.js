@@ -144,7 +144,7 @@ const UniversityStudentsMovement = () => {
   return (
     <div className={classes.root}>
       <Typography variant="h3" className={classes.title}>
-        University Students Movement
+        Hawassa University Students Movement
       </Typography>
       <Typography className={classes.description}>
         During the 2nd week of October 2021, AIPM held its annual Missions
