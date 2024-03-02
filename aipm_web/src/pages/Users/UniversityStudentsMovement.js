@@ -177,7 +177,7 @@ const UniversityStudentsMovement = () => {
         and Justin.
       </Typography>
       <Typography variant="h3" className={classes.title}>
-        University Students Movement
+        Addis Ababa University Students Movement
       </Typography>
       <Typography className={classes.description}>
         During the 2nd week of October 2021, AIPM held its annual Missions
