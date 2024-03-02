@@ -160,7 +160,7 @@ const UniversityStudentsMovement = () => {
         The conference was led by Dr. Desta and Justin Slemp.
       </Typography>
       <Typography variant="h3" className={classes.title}>
-        University Students Movement
+        Jimma University Students Movement
       </Typography>
       <Typography className={classes.description}>
         During the 2nd week of October 2021, AIPM held its annual Missions
