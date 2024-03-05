@@ -103,16 +103,6 @@ const News = () => {
           very interested in serving the Lord as missionaries. In total 250 attended the conference.`,
       imageUrl: `${newsImageFive}`,
     },
-    {
-      title: "January 20, 2024 Ambaricho Mountain Program",
-      detail: `During the 2nd week of October 2021, AIPM held its annual Missions Conference in Durame. This year we also hosted 100 
-          university students and a few high school students that are very interested in serving the Lord as missionaries. In total 250 
-          attended the conference. The conference was led by Dr. Desta and Justin Slemp. Justin is a bord member from AIPM USA. 
-          The following is the report from both Dr. Desta and Justin. During the 2nd week of October 2021, AIPM held its annual 
-          Missions Conference in Durame. This year we also hosted 100 university students and a few high school students that are 
-          very interested in serving the Lord as missionaries.`,
-      imageUrl: `${newsImageSeven}`,
-    },
 
   ];
   const fetchNews = async () => {
