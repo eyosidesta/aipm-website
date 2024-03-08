@@ -224,7 +224,7 @@ const UniversityStudentsMovement = () => {
         The conference was led by Dr. Desta and Justin Slemp.
       </Typography>
       <Typography variant="h3" className={classes.title}>
-        Bahir Dhar University Students Movement
+        Arba Minch University Students Movement
       </Typography>
       <Typography className={classes.description}>
         During the 2nd week of October 2021, AIPM held its annual Missions
@@ -240,7 +240,7 @@ const UniversityStudentsMovement = () => {
         The conference was led by Dr. Desta and Justin Slemp.
       </Typography>
       <Typography variant="h3" className={classes.title}>
-        Arba Minch University Students Movement
+        Bahir Dhar University Students Movement
       </Typography>
       <Typography className={classes.description}>
         During the 2nd week of October 2021, AIPM held its annual Missions
