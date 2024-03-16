@@ -119,7 +119,7 @@ const Footer = () => {
       </div>
       <Divider className={classes.divider} />
       <Typography variant="body2" className={classes.copyright}><em>@ Ambaricho International Prayer and Mission Movement Ministry. All rights reserved
-        2022</em>
+        2024</em>
       </Typography>
     </div>
   );
