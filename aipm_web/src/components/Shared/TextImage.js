@@ -17,7 +17,7 @@ const TextImage = ({ data, nextVal, styles }) => {
       <Grid className={classes.root}>
         {!fixed ? (
           <>
-            {nextVal % 2 == 0 ? (
+            {nextVal % 2 === 0 ? (
               <TextFirst data={data} styles={styles} />
             ) : (
               <ImageFirst data={data} styles={styles} />
