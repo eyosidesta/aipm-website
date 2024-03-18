@@ -153,7 +153,7 @@ const Testimony = () => {
     backgroundImage: backgroundImage,
     title: "Testimonies",
     detail: {
-      description: "",
+      description: "description",
       titleFont: "h6",
       descriptionFont: "body2",
       color: DEEP_BLUE_COLOR,
