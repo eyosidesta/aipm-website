@@ -42,10 +42,12 @@ const News = () => {
   const handlePaginationChange = (event, value) => {
     setData(newsState.slice((value - 1) * 3, value * 3));
   };
+
   const count =
     newsState.length / 3 - parseInt(newsState.length / 3) !== 0
       ? parseInt(newsState.length / 3) + 1
       : parseInt(newsState.length / 3);
+
   const styles = {
     width: 80,
     height: 60,
@@ -66,6 +68,15 @@ const News = () => {
   const items = [
     {
       title: "January 20, 2021 Ambaricho Mountain Program",
+      detail: `During the 3rd week of January 2021, AIPM held its annual Missions Conference in Durame. This year we also hosted 100 
+          university students and a few high school students that are very interested in serving the Lord as missionaries. In total 250 
+          attended the conference. The conference was led by Dr. Desta and Justin Slemp. Justin is a bord member from AIPM USA. 
+          The following is the report from both Dr. Desta and Justin. During the 2nd week of October 2021, AIPM held its annual 
+          Missions Conference in Durame. Justin is a bord member from AIPM USA. The following is the report from both Dr. Desta and Justin.`,
+      imageUrl: `${newsImageOne}`,
+    },
+    {
+      title: "January 20, 2022 Ambaricho Mountain Program",
       detail: `During the 3rd week of January 2021, AIPM held its annual Missions Conference in Durame. This year we also hosted 100 
           university students and a few high school students that are very interested in serving the Lord as missionaries. In total 250 
           attended the conference. The conference was led by Dr. Desta and Justin Slemp. Justin is a bord member from AIPM USA. 
