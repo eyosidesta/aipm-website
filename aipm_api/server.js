@@ -3,11 +3,26 @@ require('dotenv').config()
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const bodyParser = require("body-parser");
 const db = require('./config/database');
 
-app.use(cors());
+const corsOrigin = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(',').map((origin) => origin.trim())
+  : undefined;
+
+app.use(helmet());
+app.use(cors({ origin: corsOrigin }));
 app.use(bodyParser.json());
+
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use('/auth', authLimiter);
 
 db.authenticate().then(() => {
     console.log("db connected...");

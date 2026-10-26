@@ -13,7 +13,8 @@ exports.get_all_news = (req, res) => {
       })
     })
     .catch((err) => {
-      console.log("err: ", err);
+      console.error(err);
+      res.status(500).json({ message: 'something went wrong' });
     });
 };
 
@@ -44,12 +45,12 @@ exports.get_news_by_id = async (req, res) => {
 };
 
 exports.add_news = async (req, res) => {
-  const news = await New.create({
-    title: req.body.title,
-    detail: req.body.detail,
-    imageUrl: req.body.imageUrl,
-  });
-  if (news) {
+  try {
+    const news = await New.create({
+      title: req.body.title,
+      detail: req.body.detail,
+      imageUrl: req.body.imageUrl,
+    });
     res.status(201).json(
       response.success_response(
         sucessMessage.added_message("News"),
@@ -57,16 +58,16 @@ exports.add_news = async (req, res) => {
         news
       )
     )
-  } else {
+  } catch (err) {
+    console.error(err);
     res.status(500).json(
-      response.FailureResponse(
+      response.failure_response(
         errorMessage.added_error("News"),
         500,
-        news
+        null
       )
     )
   }
-
 }
 
 exports.update_news = async (req, res) => {
@@ -117,10 +118,11 @@ exports.update_news = async (req, res) => {
         )
       );
   }).catch((err) => {
+    console.error(err);
     res.status(500).json({
       status: false,
       code: 500,
-      message: `error found ${err}`,
+      message: 'something went wrong',
     });
   });
 };
@@ -167,13 +169,14 @@ exports.delete_news = async (req, res) => {
         );
     })
     .catch((err) => {
+      console.error(err);
       res
         .status(500)
         .json(
           response.failure_response(
             errorMessage.added_error("News"),
             500,
-            err
+            null
           )
         );
     });

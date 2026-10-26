@@ -56,19 +56,19 @@ exports.get_staff_member_by_id = async (req, res) => {
 };
 
 exports.add_staff_member = async (req, res) => {
-  const newStaff = await StaffMember.create({
-    name: req.body.name,
-    gender: req.body.gender,
-    serviceTitle: req.body.serviceTitle,
-    place: req.body.place,
-    ethiopianStaff: req.body.ethiopianStaff,
-    whoIsHe: req.body.whoIsHe,
-    responsibility: req.body.responsibility,
-    passion: req.body.passion,
-    imageUrl: req.body.imageUrl,
-  });
+  try {
+    const newStaff = await StaffMember.create({
+      name: req.body.name,
+      gender: req.body.gender,
+      serviceTitle: req.body.serviceTitle,
+      place: req.body.place,
+      ethiopianStaff: req.body.ethiopianStaff,
+      whoIsHe: req.body.whoIsHe,
+      responsibility: req.body.responsibility,
+      passion: req.body.passion,
+      imageUrl: req.body.imageUrl,
+    });
 
-  if (newStaff) {
     res
       .status(201)
       .json(
@@ -78,14 +78,15 @@ exports.add_staff_member = async (req, res) => {
           newStaff
         )
       );
-  } else {
+  } catch (err) {
+    console.error(err);
     res
       .status(500)
       .json(
         response.failure_response(
           errorMessage.added_error("Staff Members"),
           500,
-          err
+          null
         )
       );
   }
@@ -145,10 +146,11 @@ exports.update_staff_member = async (req, res) => {
         )
       );
   }).catch((err) => {
+    console.error(err);
     res.status(500).json({
       status: false,
       code: 500,
-      message: `error found ${err}`,
+      message: 'something went wrong',
     });
   });
 };
@@ -194,13 +196,14 @@ exports.delete_staff_member = async (req, res) => {
         );
     })
     .catch((err) => {
+      console.error(err);
       res
         .status(500)
         .json(
           response.failure_response(
             errorMessage.added_error("Staff Member"),
             500,
-            err
+            null
           )
         );
     });

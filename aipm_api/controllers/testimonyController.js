@@ -17,13 +17,14 @@ exports.get_all_testimonies = (req, res) => {
                 );
         })
         .catch((err) => {
+            console.error(err);
             res
                 .status(500)
                 .json(
                     response.failure_response(
                         errorMessage.found_error("Testimony"),
                         500,
-                        err
+                        null
                     )
                 );
         });
@@ -56,17 +57,17 @@ exports.get_testimony_by_id = async (req, res) => {
 }
 
 exports.add_testimony = async (req, res) => {
-    const newTestimony = await Testimony.create({
-        name: req.body.name,
-        servicePlace: req.body.servicePlace,
-        specialThing: req.body.specialThing,
-        action: req.body.action,
-        descriptionOne: req.body.descriptionOne,
-        descriptionTwo: req.body.descriptionTwo,
-        imageUrl: req.body.imageUrl,
-    });
+    try {
+        const newTestimony = await Testimony.create({
+            name: req.body.name,
+            servicePlace: req.body.servicePlace,
+            specialThing: req.body.specialThing,
+            action: req.body.action,
+            descriptionOne: req.body.descriptionOne,
+            descriptionTwo: req.body.descriptionTwo,
+            imageUrl: req.body.imageUrl,
+        });
 
-    if (newTestimony) {
         res
             .status(201)
             .json(
@@ -76,14 +77,15 @@ exports.add_testimony = async (req, res) => {
                     newTestimony
                 )
             );
-    } else {
+    } catch (err) {
+        console.error(err);
         res
             .status(500)
             .json(
                 response.failure_response(
                     errorMessage.added_error("Testimony"),
                     500,
-                    err
+                    null
                 )
             );
     }
@@ -141,10 +143,11 @@ exports.update_testimony = async (req, res) => {
                 )
             );
     }).catch((err) => {
+        console.error(err);
         res.status(500).json({
             status: false,
             code: 500,
-            message: `error found ${err}`,
+            message: 'something went wrong',
         });
     });
 };
@@ -190,13 +193,14 @@ exports.delete_testimony = async (req, res) => {
           );
       })
       .catch((err) => {
+        console.error(err);
         res
           .status(500)
           .json(
             response.failure_response(
               errorMessage.added_error("Testimony"),
               500,
-              err
+              null
             )
           );
       });
