@@ -103,6 +103,12 @@ const SignIn = () => {
     const credentials = { email: email, password: password };
     const res = await signIn(credentials);
     setIsLoading(false);
+    if (!(res.statusText === "")) {
+      setMessage("Error! Unable to sign in, try again");
+      setType("error");
+      setOpenSnackbar(true);
+      return;
+    }
     dispatch(signInAction());
     setOpenSnackbar(true);
     setTimeout(() => {
@@ -190,6 +196,7 @@ const SignIn = () => {
         <Grid item>
           <img
             src={siginImage}
+            alt=""
             style={{ height: extraSmall ? "50vh" : "100vh" }}
           />
         </Grid>

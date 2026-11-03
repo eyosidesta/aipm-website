@@ -109,7 +109,7 @@ const AdminList = () => {
 
   const fetchAdminLists = async () => {
     setLoading(true);
-    const res = await getAdminList();
+    await getAdminList();
     setLoading(false);
     dispatch(getAdminListAction(items));
     setData(items.slice(0, 3));
@@ -117,6 +117,7 @@ const AdminList = () => {
 
   useEffect(() => {
     fetchAdminLists();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

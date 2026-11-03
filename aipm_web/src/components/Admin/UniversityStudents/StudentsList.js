@@ -179,7 +179,7 @@ const StudentsList = () => {
 
   const fetchStudentsMovement = async () => {
     setLoading(true);
-    const res = await getUniversityStudentsMovements();
+    await getUniversityStudentsMovements();
     setLoading(false);
     dispatch(getUniversityStudentsMovementsAction(items));
     setData(items.slice(0, 3));
@@ -187,6 +187,7 @@ const StudentsList = () => {
 
   useEffect(() => {
     fetchStudentsMovement();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

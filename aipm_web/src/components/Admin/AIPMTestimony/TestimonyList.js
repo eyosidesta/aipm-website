@@ -135,7 +135,7 @@ const TestimonyList = () => {
 
   const fetchTestimonies = async () => {
     setLoading(true);
-    const res = await getTestimonies();
+    await getTestimonies();
     setLoading(false);
     dispatch(getTestimoniesAction(items));
     setData(items.slice(0, 3));
@@ -143,6 +143,7 @@ const TestimonyList = () => {
 
   useEffect(() => {
     fetchTestimonies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -137,7 +137,7 @@ const NewsList = () => {
 
   const fetchNews = async () => {
     setLoading(true);
-    const res = await getNews();
+    await getNews();
     setLoading(false);
     dispatch(getNewsAction(items));
     setData(items.slice(0, 3));
@@ -145,6 +145,7 @@ const NewsList = () => {
 
   useEffect(() => {
     fetchNews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

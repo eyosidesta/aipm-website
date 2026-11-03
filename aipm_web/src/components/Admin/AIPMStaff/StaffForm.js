@@ -172,13 +172,13 @@ const StaffForm = ({ data, setEditMode }) => {
     setLoading(true);
     if (!data) {
       const res = await addStaffmember(staffInfo);
-      if (!(res.statusText == "")) {
+      if (!(res.statusText === "")) {
         setMessage("Error! Unable to add staff member");
         setType("error");
       }
     } else {
       const res = await updatStaffMember(staffInfo);
-      if (!(res.statusText == "")) {
+      if (!(res.statusText === "")) {
         setMessage("Error! Unable to update staff member info, try again");
         setType("error");
       } else {

@@ -125,13 +125,13 @@ const StudentsForm = ({ data, setEditMode }) => {
     setLoading(true);
     if (!data) {
       const res = await addStudentsMovement(studentsMovementInfo);
-      if (!(res.statusText == "")) {
+      if (!(res.statusText === "")) {
         setMessage("Error! Unable to update students movement, try gain");
         setType("error");
       }
     } else {
       const res = await updatStudentsMovement(studentsMovementInfo);
-      if (!(res.statusText == "")) {
+      if (!(res.statusText === "")) {
         setMessage("Error! Unable to update students movement, try again");
         setType("error");
       } else {

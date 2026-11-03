@@ -1,159 +1,343 @@
 import React from "react";
-import { makeStyles, Typography } from "@material-ui/core";
-import {
-  BACKGROUND_COLOR,
-  DEEP_BLUE_COLOR,
-  WHITE_COLOR,
-} from "../../utils/constants/colors";
-import backgroundImage from "../../assets/home_new_img.png";
-import homeImageOne from "../../assets/home_image_one.png";
-import homeImageTwo from "../../assets/home_image_two.jpg";
-import HomeTickets from "../../components/Users/Home/HomeTickets";
-import ImageWithTextCenter from "../../components/Shared/ImageWithTextCenter";
-import TextImage from "../../components/Shared/TextImage";
+import { Link } from "react-router-dom";
+import Reveal from "../../components/Shared/Reveal";
+import Marquee from "../../components/Shared/Marquee";
+import VideoPlaceholderCard from "../../components/Shared/VideoPlaceholderCard";
+import { Meter, FundMeter, Steps } from "../../components/Shared/Meter";
+import { useLightbox } from "../../context/LightboxContext";
+import { hero, origin, founder, birhan, cross, gather2 } from "../../assets/siteImages";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    background: BACKGROUND_COLOR,
-    color: DEEP_BLUE_COLOR,
-  },
-  image: {
-    maxHeight: "75vh",
-    width: "100%",
-    marginBottom: 30,
-  },
-  prayerMovement: {
-    textAlign: "center",
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 30,
-    marginBottom: 10,
-  },
-  prayerTitle: {
-    marginBottom: 10,
-  },
-  imageContainer: {
-    position: "relative",
-    color: WHITE_COLOR,
-  },
-  aipmText: {
-    position: "absolute",
-    textAlign: "center",
-    width: "100%",
-    height: "0%",
-    margin: "auto",
-    top: 0,
-    left: 0,
-    bottom: 190,
-    right: 0,
-    zIndex: 51,
-  },
-  aipmTitle: {
-    fontSize: "8vw",
-    paddingBottom: 20,
-  },
-  aipmDetail: {
-    fontSize: "4vw",
-  },
-  movementDescription: {
-    paddingLeft: 50,
-    paddingRight: 50,
-  },
-  textImageContainer: {
-    marginTop: 30,
-    width: "94%",
-    paddingLeft: "3%",
-  },
-}));
-function Home() {
-  const classes = useStyles();
-  const items = [
-    {
-      title: "How AIPM Stablished",
-      detail: `This is about an incredible movement called Ambaricho 
-      International Prayer and Mission Movement (AIPM)
-      The movement was started on 3,028 meters (9,932 feet) Mountain 
-      called Ambaricho. This mountain is located 350 KM (220 miles) 
-      to the south from the capital, Addis Ababa. 
-      Ambaricho was the seat of a witchdoctor family called Abba Sarecho. 
-      Abba Sarecho’s family was worshipped for more than 500 years, where 
-      tens of thousands of people were gathering each year to worship the 
-      consecutive Abba-Sarechos. Missionaries arrived to the southern part of 
-      Ethiopia in late 1920s and afterwards from the USA, Canada, Australia, 
-      England and New Zealand. Their faithful endeavor brought about the 
-      conversion of natives who were very bold to share their faith in Christ. 
-      Their day and night prayer fueled the spread of the Gospel, which 
-      transformed the lives of people. To that effect currently over 
-      95% of the Kambatta tribe are evangelical Christians. The last Abba Sarecho, 
-      who is still alive, became a follower of Jesus Christ, and the very place where 
-      he was worshipped also became the place of this prayer movement and missionary sending center. `,
-      imageUrl: `${homeImageOne}`,
-    },
-    {
-      title: "The Founder of AIPM and it's history behind",
-      detail: `God used Dr. Desta Langena Letta, as the founder and Director of AIPM. 
-      He received his degree in Physics from Addis Ababa University and did his MA in 
-      missions in Singapore. He received his Doctoral degree in missiology at Western 
-      Seminary in Portland Oregon, USA. He directed the Ethiopian Kale Heywet missionary 
-      training school for 6 years before his study at Western. All these experiences equipped 
-      him to be a catalyst for the commencement and growth of this movement (AIPM). Every 
-      January 19th an average of 150,000 Christians are gathering on the top of Mount Ambaricho 
-      to pray and fast for World Evangelism. has sent over 300 missionaries and is praying to 
-      send more than 1,000 missionaries to the unreached people groups of Ethiopia. Planning 
-      is underway to start sending missionary families soon outside Ethiopia, as the Lord provides support. 
-      The Governor of the Durame district dedicated Ambaricho to God as a place of prayer and 
-      to build prayer houses on the very top of the mountain.
-      `,
-      imageUrl: `${homeImageTwo}`,
-    },
-  ];
-
-  const styles = {
-    width: 100,
-    height: 75,
-    backgroundImage: backgroundImage,
-    title: "AIPM",
-    detail: {
-      description: "Ambaricho International Prayer And Mission Movement",
-      titleFont: "h3",
-      descriptionFont: "h6",
-    },
-    borderRadius: 0,
-  };
-  const titleStyle = {
-    textAlign: "center",
-    marginBottom: 10,
-  };
+function PlayIcon() {
   return (
-    <div className={classes.root}>
-      <ImageWithTextCenter styles={styles} />
-      <div className={classes.textImageContainer}>
-        {items.map((item, index) => {
-          return (
-            <TextImage
-              key={index}
-              nextVal={index}
-              data={item}
-              styles={titleStyle}
-            />
-          );
-        })}
-      </div>
-      <div className={classes.prayerMovement}>
-        <Typography variant="h6" className={classes.prayerTitle}>
-          Prayer and Mission Movement
-        </Typography>
-        <Typography variant="body2" className={classes.movementDescription}>
-          Missionaries supported by AIPM serve in unreached areas of Ethiopia.
-          In addition, we give support to a few missionaries serving in India,
-          Pakistan and South Sudan.
-          This movement got its name, Ambaricho International Prayer and
-          Missions Movement (AIPM) because of its focus on prayer for revival
-          and renewal of existing churches
-        </Typography>
-      </div>
-      <HomeTickets />
-    </div>
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M9 7v10l8-5-8-5Z" fill="#FBF7EC" />
+    </svg>
   );
 }
+
+const MOVEMENTS = [
+  {
+    to: "/movements#prayer",
+    title: "Prayer Movement",
+    desc: "Every January 19th, as many as 100,000 gather on Ambaricho's summit to fast and pray for world evangelization.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3v12M7 9h10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path d="M5 21c0-4 3-6 7-6s7 2 7 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    to: "/movements#students",
+    title: "University Students Movement",
+    desc: "Raising the next generation of intercessors and missionaries on campuses across Ethiopia.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 4 3 8l9 4 9-4-9-4Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
+  },
+  {
+    to: "/movements#mission",
+    title: "Mission Movement",
+    desc: "470+ missionaries trained and sent to unreached peoples across Ethiopia over the past 25 years.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="2" />
+        <path d="M4 12h16M12 4c2.5 2.3 4 5 4 8s-1.5 5.7-4 8c-2.5-2.3-4-5-4-8s1.5-5.7 4-8Z" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
+  },
+  {
+    to: "/movements#ddlf",
+    title: "Dr. Desta Langena Foundation",
+    desc: "Food, clothing and encouragement for men, women and children in great need around Durame.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21s-7-5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4-9.5 9-9.5 9Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+];
+
+const VOICES = [
+  { img: origin, tag: "Mission Movement", title: "A missionary's testimony" },
+  { img: hero, tag: "Prayer Movement", title: "Why we climb every January" },
+  { img: gather2, tag: "Students", title: "A new generation of intercessors" },
+  { img: birhan, tag: "Birhan Building", title: "Building a home for prayer" },
+];
+
+function Home() {
+  const { open } = useLightbox();
+
+  return (
+    <>
+      <section className="hero">
+        {/*
+          Ready to swap in real footage: replace the <video> source below
+          with your own file in /public/videos, or point at a hosted CDN URL.
+          Autoplay video must stay muted to play in every browser.
+        */}
+        <video className="bgvideo" autoPlay muted loop playsInline poster={hero}>
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        <div className="wrap hero-inner">
+          <div className="hero-kicker amh">አምበሪቾ አለም አቀፍ የጸሎት እና የወንጌል አገልግሎት</div>
+          <div className="hero-kicker-en">Ambaricho International Prayer &amp; Mission Movement</div>
+          <h1>
+            A mountain of idols.
+            <br />
+            Now a mountain of <em>prayer.</em>
+          </h1>
+          <p className="lede">
+            For more than 700 years, Mount Ambaricho was worshipped as the seat of a witchdoctor dynasty. Today, as
+            many as 100,000 believers climb its 3,028&nbsp;metre summit every January&nbsp;19th to fast and pray for
+            world evangelism.
+          </p>
+          <div className="hero-ctas">
+            <Link to="/give" className="btn btn-gold">
+              Give Toward the Mountain
+            </Link>
+            <button
+              className="playbtn"
+              onClick={() =>
+                open({
+                  img: hero,
+                  title: "The Annual Gathering",
+                  note: "Placeholder footage — drop your own gathering video into /public/videos when it's ready.",
+                })
+              }
+            >
+              <span className="ring">
+                <PlayIcon />
+              </span>
+              Watch the Gathering
+            </button>
+          </div>
+        </div>
+        <div className="scrollcue">
+          <span>Scroll</span>
+          <span className="line" />
+        </div>
+      </section>
+
+      <Marquee words={["Prayer", "Fasting", "Revival", "Mission", "Training", "Compassion"]} />
+
+      <section className="stats">
+        <div className="wrap">
+          <Reveal className="bento" stagger>
+            <div className="bstat feature" style={{ "--feat-img": `url(${hero})` }}>
+              <span className="tag">Kambatta Highlands</span>
+              <div className="num">3,028m</div>
+              <div className="label">Summit of Mount Ambaricho &mdash; once a seat of idol worship, now a place of prayer.</div>
+            </div>
+            <div className="bstat" style={{ "--i": 1 }}>
+              <div className="num">100,000+</div>
+              <div className="label">Gather on the mountain every January 19th &mdash; up from just 500</div>
+            </div>
+            <div className="bstat" style={{ "--i": 2 }}>
+              <div className="num">470+</div>
+              <div className="label">Missionaries trained and sent in the last 25 years</div>
+            </div>
+            <div className="bstat wide" style={{ "--i": 3 }}>
+              <div className="num">700+ years of idol worship, now a mountain of prayer</div>
+              <div className="label">The last of the Abba Sarecho witchdoctor dynasty became a follower of Christ</div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="origin">
+        <div className="wrap split">
+          <Reveal as="figure">
+            <img src={origin} alt="A pastor addresses a vast crowd seated on the open hillside of Mount Ambaricho." />
+            <figcaption>
+              <div className="num">1920s</div>
+              <div className="txt">Missionaries from England, the US, Canada, Australia &amp; New Zealand first reach southern Ethiopia</div>
+            </figcaption>
+          </Reveal>
+          <Reveal className="split-copy">
+            <div className="eyebrow">Our Story</div>
+            <h2 style={{ marginTop: 10 }}>From Abba Sarecho&apos;s mountain to God&apos;s mountain</h2>
+            <p>
+              For over 700 years, Mount Ambaricho was the seat of a witchdoctor family, Abba Sarecho &mdash;
+              worshipped by tens of thousands who gathered there each year.
+            </p>
+            <p>
+              After missionaries carried the Gospel into southern Ethiopia in the late 1920s, prayer transformed the
+              region: over 95% of the Kambatta people are evangelical Christians today, and the 22nd of the Abba
+              Sarecho dynasty became a follower of Jesus Christ himself.
+            </p>
+            <p>
+              What began with a handful of teenagers pooling money after a hike has grown into a movement spanning
+              prayer, training and mission across Ethiopia and beyond.
+            </p>
+            <Link to="/our-story" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
+              Read Our Full Story &rarr;
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bigword">
+        <div className="wrap">
+          <Reveal className="track">
+            <span className="from">Idols</span>
+            <span className="arrow">&#10230;</span>
+            <span className="to">Intercession</span>
+          </Reveal>
+          <div className="cap">The story of every summit, every missionary, every gathering</div>
+        </div>
+      </section>
+
+      <section className="founder alt">
+        <div className="wrap">
+          <Reveal as="img" src={founder} alt="Dr. Desta Langena Letta, founder of AIPM, with his wife." />
+          <Reveal>
+            <div className="eyebrow">The Founder</div>
+            <blockquote style={{ marginTop: 14 }}>&ldquo;If we pray, God works! If we don&apos;t pray, we work.&rdquo;</blockquote>
+            <div className="who">
+              <div>
+                <div className="name">Dr. Desta Langena Letta</div>
+                <div className="role">Founder &amp; Director, AIPM</div>
+              </div>
+            </div>
+            <p className="bio">
+              A graduate in Physics from Addis Ababa University, Dr. Desta earned his M.A. in Missions in Singapore
+              and a Doctorate in Missiology at Western Seminary, Portland. He directed the Ethiopian Kale Heywet
+              missionary training school for six years before founding AIPM &mdash; experience that shaped a
+              movement now training and sending missionaries across Ethiopia and beyond.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="movements">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <div className="eyebrow">What We Do</div>
+              <h2>Three movements, one mountain</h2>
+            </div>
+            <p>Prayer, training and gospel advancement &mdash; each rooted in the same summit where Ambaricho&apos;s story began.</p>
+          </Reveal>
+          <Reveal className="rail-shell">
+            <div className="rail">
+              {MOVEMENTS.map((m) => (
+                <Link key={m.to} to={m.to} className="movecard">
+                  <div className="icon">{m.icon}</div>
+                  <h3>{m.title}</h3>
+                  <p>{m.desc}</p>
+                  <span className="more">Learn more &rarr;</span>
+                </Link>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="alt" id="voices">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <div className="eyebrow">Voices</div>
+              <h2>Stories from the mountain</h2>
+            </div>
+            <p>Short video testimonies from missionaries, students and families &mdash; placeholders, ready for your footage.</p>
+          </Reveal>
+          <Reveal className="rail-shell">
+            <div className="rail">
+              {VOICES.map((v) => (
+                <VideoPlaceholderCard key={v.title} img={v.img} tag={v.tag} title={v.title} />
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <div className="eyebrow">Building the Mountain</div>
+              <h2>Projects underway across AIPM</h2>
+            </div>
+            <p>
+              <Link to="/projects" className="btn btn-outline-ink">
+                See All Projects &rarr;
+              </Link>
+            </p>
+          </Reveal>
+          <Reveal className="projects-grid" stagger>
+            <div className="project-card" style={{ "--i": 0 }}>
+              <div className="img-wrap">
+                <img src={birhan} alt="Construction of the concrete foundation for the Birhan Building on Mount Ambaricho." />
+                <span className="status-pill dot">Under construction</span>
+              </div>
+              <div className="body">
+                <h3>Birhan Building Project</h3>
+                <p>A 7-story building in Durame for retail, food and medical services, leader training and missionary housing.</p>
+                <Meter label="Construction progress" percent={62} />
+              </div>
+            </div>
+            <div className="project-card" style={{ "--i": 1 }}>
+              <div className="img-wrap">
+                <img src={cross} alt="Architectural rendering of the planned cross monument on Mount Ambaricho's summit." />
+                <span className="status-pill dot">Coming soon</span>
+              </div>
+              <div className="body">
+                <h3>Global Missions University</h3>
+                <p>Land acquired, curriculum developed &mdash; a future home to train missionaries from Ethiopia, Africa and beyond.</p>
+                <Steps
+                  steps={[
+                    { label: "Land", done: true },
+                    { label: "Curriculum", done: true },
+                    { label: "Campus", done: false },
+                  ]}
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="pullquote">
+        <Reveal className="wrap">
+          <p>If we pray, God works! If we don&apos;t pray, we work.</p>
+          <div className="attr">Dr. Desta Langena Letta &mdash; Founder, AIPM</div>
+        </Reveal>
+      </section>
+
+      <section className="cta-band" id="give">
+        <div className="wrap">
+          <div className="inner">
+            <Reveal>
+              <h2>Partner with the mountain</h2>
+              <p>
+                It costs $100&ndash;$300 a month to fully support a missionary family. AIPM USA raises up to half
+                &mdash; the rest comes from partners like you.
+              </p>
+              <FundMeter
+                raisedLabel="$48,200 raised"
+                goalLabel="Goal: $120,000"
+                percent={40}
+                note="Toward Birhan Hall — placeholder figures, ready for your real campaign numbers."
+              />
+            </Reveal>
+            <Reveal className="actions">
+              <Link to="/give" className="btn btn-gold">
+                Give Now
+              </Link>
+              <Link to="/get-involved#prayer-request" className="btn btn-outline-ink">
+                Request Prayer
+              </Link>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 export default Home;

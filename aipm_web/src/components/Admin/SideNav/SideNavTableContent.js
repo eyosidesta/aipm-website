@@ -2,8 +2,6 @@ import React from "react";
 import {
   TableRow,
   TableCell,
-  Typograhy,
-  Paper,
   makeStyles,
   Typography,
 } from "@material-ui/core";

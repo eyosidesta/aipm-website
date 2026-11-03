@@ -77,7 +77,7 @@ const StaffListItemDetail = ({ data, setEditMode }) => {
         </Grid>
         <Grid item>
           <Typography variant="h6">
-            {data.staffLocation == "Ethiopia"
+            {data.staffLocation === "Ethiopia"
               ? "Ethiopian AIPM Staff Member"
               : "USA AIPM Staff Member"}
           </Typography>
@@ -85,7 +85,7 @@ const StaffListItemDetail = ({ data, setEditMode }) => {
       </Grid>
       <Grid container className={classes.detailGridContainer}>
         <Grid item>
-          <img src={data.imageUrl} className={classes.image} />
+          <img src={data.imageUrl} className={classes.image} alt={data.fullName} />
         </Grid>
         <Grid
           item
@@ -109,7 +109,7 @@ const StaffListItemDetail = ({ data, setEditMode }) => {
       </div>
       <div className={classes.passionContainer}>
         <Typography variant="h6">
-          {data.gender == "Male" ? "His" : "Her"} Passion
+          {data.gender === "Male" ? "His" : "Her"} Passion
         </Typography>
         <Typography variant="body2">{data.passion}</Typography>
       </div>

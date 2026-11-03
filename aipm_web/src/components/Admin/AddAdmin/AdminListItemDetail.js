@@ -3,7 +3,6 @@ import {
   Grid,
   Typography,
   makeStyles,
-  Icon,
   Button,
   useTheme,
   useMediaQuery,
@@ -63,7 +62,7 @@ const AdminListItemDetail = ({ data, isIconUp, setIsIconUp, setEditMode }) => {
           </Grid>
         </Grid>
         <Grid item xs={6} sm>
-          <img src={data.imageUrl} className={classes.image} />
+          <img src={data.imageUrl} className={classes.image} alt={data.fullName} />
         </Grid>
         <Grid item onClick={handleEditClick}>
           {/* <Icon>edit</Icon> */}

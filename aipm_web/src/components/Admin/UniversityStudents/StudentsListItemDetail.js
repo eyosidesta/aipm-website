@@ -65,7 +65,7 @@ const StudentsListItemDetail = ({ data, setEditMode }) => {
       </Grid>
       <Grid container className={classes.detailGridContainer}>
         <Grid item>
-          <img src={data.imageUrl} className={classes.image} />
+          <img src={data.imageUrl} className={classes.image} alt={data.title} />
         </Grid>
         <Grid
           item

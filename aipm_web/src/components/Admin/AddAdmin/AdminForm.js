@@ -141,7 +141,7 @@ const AdminForm = () => {
   const handleSubmitClick = async () => {
     setLoading(true);
     const res = await addAdmin(credentials);
-    if(!(res.statusText == "")) {
+    if(!(res.statusText === "")) {
       setMessage("Error! Unable to add new Admin, try again")
       setType("error")
     }

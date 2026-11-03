@@ -115,13 +115,13 @@ const NewsForm = ({ data, setEditMode }) => {
     setLoading(true);
     if (!data) {
       const res = await addNews(values);
-      if (!(res.statusText == "")) {
+      if (!(res.statusText === "")) {
         setMessage("Error! Unable to update news, try gain");
         setType("error");
       }
     } else {
       const res = await updatNews(values);
-      if (!(res.statusText == "")) {
+      if (!(res.statusText === "")) {
         setMessage("Error! Unable to update news, try again");
         setType("error");
       } else {
@@ -201,7 +201,7 @@ const NewsForm = ({ data, setEditMode }) => {
               <br />
               { data && (
                 <>
-                  <img src={newsImage} className={classes.newsImage} />
+                  <img src={newsImage} className={classes.newsImage} alt="News" />
                   <DeleteIcon className={classes.imageRemove} onClick={handleRemoveImage} />
                 </>
               )}

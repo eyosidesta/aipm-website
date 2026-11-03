@@ -20,7 +20,6 @@ import {
   addTestimony,
   updatTestimony,
 } from "../../../utils/ApiService/testimony.api";
-import { Formik } from "formik";
 import SnackBar from "../../Shared/SnackBar";
 
 const useStyles = makeStyles((theme) => ({
@@ -155,13 +154,13 @@ const TestimonyForm = ({ data, setEditMode }) => {
     setLoading(true);
     if (!data) {
       const res = await addTestimony(testimonyInfo);
-      if (!(res.statusText == "")) {
+      if (!(res.statusText === "")) {
         setMessage("Error! Unable to add testimony, try again");
         setType("error");
       }
     } else {
       const res = await updatTestimony(testimonyInfo);
-      if (!(res.statusText == "")) {
+      if (!(res.statusText === "")) {
         setMessage("Error! Unable to update testimony, try again");
         setType("error");
       } else {

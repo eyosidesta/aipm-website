@@ -154,7 +154,7 @@ const StaffList = () => {
 
   const fetchStaffmembers = async () => {
     setLoading(true);
-    const res = await getStaffMembers();
+    await getStaffMembers();
     setLoading(false);
     dispatch(getStaffMembersAction(items));
     setData(items.slice(0, 3));
@@ -162,6 +162,7 @@ const StaffList = () => {
 
   useEffect(() => {
     fetchStaffmembers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
