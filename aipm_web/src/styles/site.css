@@ -64,7 +64,7 @@
 .aipm header.site.solid{background:var(--nav-bg-solid); backdrop-filter:blur(8px); box-shadow:0 1px 0 rgba(255,255,255,0.06);}
 .aipm nav.wrap{display:flex; align-items:center; justify-content:space-between; height:78px; gap:16px;}
 .aipm .brand{display:flex; align-items:center; gap:11px; text-decoration:none;}
-.aipm .brand svg{width:30px;height:30px;flex:none;}
+.aipm .brand-mark{width:auto;height:34px;flex:none;object-fit:contain;}
 .aipm .brand .word{font-family:"Fraunces",serif; font-weight:700; font-size:21px; letter-spacing:.02em; color:#FBF7EC;}
 .aipm .brand .sub{display:block; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-pale); margin-top:1px;}
 .aipm .navlinks{display:flex; align-items:center; gap:24px; list-style:none; margin:0; padding:0;}
