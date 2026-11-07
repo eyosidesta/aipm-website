@@ -28,9 +28,10 @@ function SiteFooter() {
           <div className="foot-col">
             <h4>Movements</h4>
             <ul>
-              <li><Link to="/movements#prayer">Prayer Movement</Link></li>
-              <li><Link to="/movements#students">University Students</Link></li>
-              <li><Link to="/movements#mission">Mission Movement</Link></li>
+              <li><Link to="/movements#prayer">Prayer</Link></li>
+              <li><Link to="/movements#mission">Mission</Link></li>
+              <li><Link to="/movements#training">Training</Link></li>
+              <li><Link to="/movements#charity">Charity</Link></li>
             </ul>
           </div>
           <div className="foot-col">
@@ -44,7 +45,7 @@ function SiteFooter() {
           </div>
         </div>
         <div className="foot-bottom">
-          <div>&copy; {new Date().getFullYear()} AIPM &mdash; Ambaricho International Prayer and Mission Movement &middot; Durame, Ethiopia &middot; Ormond Beach, Florida</div>
+          <div>&copy; {new Date().getFullYear()} AIPM &mdash; Ambaricho International Prayer and Mission Movement &middot; Durame, Ethiopia</div>
           <div className="foot-social">
             <a href="https://www.youtube.com/@AIPM-Global/videos" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">

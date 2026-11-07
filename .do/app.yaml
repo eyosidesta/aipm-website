@@ -1,0 +1,36 @@
+name: aipm-api
+region: nyc
+services:
+  - name: api
+    github:
+      repo: eyosidesta/aipm-website
+      branch: main
+      deploy_on_push: true
+    source_dir: aipm_api
+    dockerfile_path: aipm_api/Dockerfile
+    http_port: 3000
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    health_check:
+      http_path: /
+    envs:
+      - key: NODE_ENV
+        value: production
+      - key: DB_SSL
+        value: "true"
+      - key: DATABASE_URL
+        value: ${aipm-db.DATABASE_URL}
+        type: SECRET
+      - key: CORS_ORIGIN
+        value: https://your-vercel-domain.vercel.app
+      - key: ACCESS_TOKEN_SECRET
+        value: REPLACE_ME
+        type: SECRET
+      - key: REFRESH_TOKEN_SECRET
+        value: REPLACE_ME
+        type: SECRET
+databases:
+  - name: aipm-db
+    engine: PG
+    version: "15"
+    production: false

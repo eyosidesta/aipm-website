@@ -1,31 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { PageHero } from "../../components/Shared/PageHero";
 import Reveal from "../../components/Shared/Reveal";
 import { gather2 } from "../../assets/siteImages";
+import { sendContactMessage } from "../../utils/ApiService/contact.api";
+
+const INITIAL_FORM = { name: "", email: "", reason: "General question", message: "" };
 
 function ContactUs() {
+  const [form, setForm] = useState(INITIAL_FORM);
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+
+  const handleChange = (e) => {
+    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+    const res = await sendContactMessage(form);
+    if (res && res.status === 201) {
+      setStatus("sent");
+      setForm(INITIAL_FORM);
+    } else {
+      setStatus("error");
+    }
+  };
+
   return (
     <>
       <PageHero img={gather2} eyebrow="Get In Touch" crumb="Contact" title="We'd love to hear from you" />
 
       <section>
-        <Reveal className="wrap grid2" stagger>
-          <div className="loccard" style={{ "--i": 0 }}>
+        <Reveal className="wrap" stagger>
+          <div className="loccard" style={{ "--i": 0, maxWidth: 480 }}>
             <div className="eyebrow">Ethiopia</div>
             <h3>AIPM &mdash; Durame</h3>
             <div className="addr">The movement&apos;s home &mdash; six hours south of Addis Ababa, near Mount Ambaricho.</div>
-          </div>
-          <div className="loccard" style={{ "--i": 1 }}>
-            <div className="eyebrow">United States</div>
-            <h3>AIPM USA &mdash; Ormond Beach, Florida</h3>
-            <div className="addr">
-              226 North Nova Road, Box 302
-              <br />
-              Ormond Beach, Florida 32174
-            </div>
-            <a href="mailto:info@aipmusa.org" className="link">
-              info@aipmusa.org &rarr;
-            </a>
           </div>
         </Reveal>
       </section>
@@ -39,23 +49,18 @@ function ContactUs() {
             </div>
           </Reveal>
           <Reveal style={{ background: "var(--surface)", border: "1px solid var(--line)", borderRadius: 8, padding: 30 }}>
-            <form
-              className="formgrid"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
+            <form className="formgrid" onSubmit={handleSubmit}>
               <div className="field">
                 <label>Name</label>
-                <input type="text" placeholder="Your name" />
+                <input type="text" name="name" placeholder="Your name" value={form.name} onChange={handleChange} required />
               </div>
               <div className="field">
                 <label>Email</label>
-                <input type="email" placeholder="you@example.com" />
+                <input type="email" name="email" placeholder="you@example.com" value={form.email} onChange={handleChange} required />
               </div>
               <div className="field full">
                 <label>Reason for contact</label>
-                <select defaultValue="General question">
+                <select name="reason" value={form.reason} onChange={handleChange}>
                   <option>General question</option>
                   <option>Prayer request</option>
                   <option>Partnership &amp; giving</option>
@@ -64,12 +69,22 @@ function ContactUs() {
               </div>
               <div className="field full">
                 <label>Message</label>
-                <textarea placeholder="How can we help?" />
+                <textarea name="message" placeholder="How can we help?" value={form.message} onChange={handleChange} required />
               </div>
               <div className="full">
-                <button type="submit" className="btn btn-gold" style={{ marginTop: 4 }}>
-                  Send Message
+                <button type="submit" className="btn btn-gold" style={{ marginTop: 4 }} disabled={status === "sending"}>
+                  {status === "sending" ? "Sending…" : "Send Message"}
                 </button>
+                {status === "sent" && (
+                  <p style={{ color: "var(--accent-deep)", marginTop: 12, fontSize: 14.5 }}>
+                    Thank you &mdash; your message has been sent. We&apos;ll be in touch soon.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p style={{ color: "#B3412C", marginTop: 12, fontSize: 14.5 }}>
+                    Something went wrong sending your message. Please try again in a moment.
+                  </p>
+                )}
               </div>
             </form>
           </Reveal>

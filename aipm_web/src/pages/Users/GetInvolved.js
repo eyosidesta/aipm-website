@@ -18,7 +18,7 @@ const PRAYER_WALL_SAMPLES = [
   {
     name: "A Student, Addis Ababa",
     date: "Sep 2026",
-    body: "Please pray for the University Students Movement as we start a new semester — for boldness to share our faith on campus.",
+    body: "Please pray for the student training ministry as we start a new semester — for boldness to share our faith on campus.",
   },
 ];
 

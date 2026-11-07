@@ -24,8 +24,21 @@ const authLimiter = rateLimit({
 });
 app.use('/auth', authLimiter);
 
+const contactLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use('/contact', contactLimiter);
+
+const Contact = require('./models/Contact');
+
 db.authenticate().then(() => {
     console.log("db connected...");
+    return Contact.sync();
+}).then(() => {
+    console.log("contacts table ready");
 }).catch(err => {
     console.log("Error: ", err);
 })
@@ -35,6 +48,7 @@ const testimoniesRoute = require('./routes/testimonies');
 const prayerMovementRoute = require('./routes/prayer.movement');
 const staffMembersRoute = require('./routes/staff.members');
 const authRoute = require('./routes/authentication');
+const contactRoute = require('./routes/contact');
 
 app.get("/", (req, res) => {
     res.send("config get request")
@@ -45,6 +59,7 @@ app.use("/news", newsRoute);
 app.use("/testimonies", testimoniesRoute);
 app.use("/prayer", prayerMovementRoute);
 app.use("/staffs", staffMembersRoute);
+app.use("/contact", contactRoute);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`AIPM API listening on port ${PORT}`);

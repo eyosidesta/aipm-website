@@ -80,18 +80,17 @@ export const PROJECTS = [
     videos: [],
   },
   {
-    slug: "desta-langena-foundation",
+    slug: "charity",
     eyebrow: "Compassion",
-    title: "Dr. Desta Langena Foundation",
+    title: "AIPM Charity Ministry",
     status: "Ongoing",
     summary:
       "Food, clothing and encouragement for men, women and children in great need around Durame.",
     heroImage: gather2,
     body: [
-      "The Dr. Desta Langena Foundation (DDLF) is a charitable organization in Durame, Ethiopia, that exists to help men, women and children in great need through food, clothing and encouragement.",
-      "Through team building and training, DDLF is able to provide much-needed resources to those in the greatest need — the compassionate arm of the AIPM movement.",
+      "AIPM's charity ministry exists in Durame, Ethiopia, to help men, women and children in great need through food, clothing and encouragement.",
+      "Through team building and training, this work provides much-needed resources to those in the greatest need — the compassionate arm of the AIPM movement.",
     ],
-    note: "DDLF's own website is coming soon.",
     gallery: [],
     videos: [],
   },

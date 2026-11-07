@@ -18,7 +18,7 @@ function PlayIcon() {
 const MOVEMENTS = [
   {
     to: "/movements#prayer",
-    title: "Prayer Movement",
+    title: "Prayer",
     desc: "Every January 19th, as many as 100,000 gather on Ambaricho's summit to fast and pray for world evangelization.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -28,19 +28,8 @@ const MOVEMENTS = [
     ),
   },
   {
-    to: "/movements#students",
-    title: "University Students Movement",
-    desc: "Raising the next generation of intercessors and missionaries on campuses across Ethiopia.",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M12 4 3 8l9 4 9-4-9-4Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-        <path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
-  {
     to: "/movements#mission",
-    title: "Mission Movement",
+    title: "Mission",
     desc: "470+ missionaries trained and sent to unreached peoples across Ethiopia over the past 25 years.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -50,8 +39,19 @@ const MOVEMENTS = [
     ),
   },
   {
-    to: "/movements#ddlf",
-    title: "Dr. Desta Langena Foundation",
+    to: "/movements#training",
+    title: "Training",
+    desc: "Discipling students on campuses across Ethiopia, and building the AIPM Global Missions University in Durame.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 4 3 8l9 4 9-4-9-4Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
+  },
+  {
+    to: "/movements#charity",
+    title: "Charity",
     desc: "Food, clothing and encouragement for men, women and children in great need around Durame.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -220,9 +220,9 @@ function Home() {
           <Reveal className="section-head">
             <div>
               <div className="eyebrow">What We Do</div>
-              <h2>Three movements, one mountain</h2>
+              <h2>Four pillars, one mountain</h2>
             </div>
-            <p>Prayer, training and gospel advancement &mdash; each rooted in the same summit where Ambaricho&apos;s story began.</p>
+            <p>Prayer, mission, training and charity &mdash; each rooted in the same summit where Ambaricho&apos;s story began.</p>
           </Reveal>
           <Reveal className="rail-shell">
             <div className="rail">
@@ -312,8 +312,8 @@ function Home() {
             <Reveal>
               <h2>Partner with the mountain</h2>
               <p>
-                It costs $100&ndash;$300 a month to fully support a missionary family. AIPM USA raises up to half
-                &mdash; the rest comes from partners like you.
+                Supporting a missionary family takes ongoing partnership. Give whatever amount God leads you to
+                &mdash; prayer, mission, training or charity, every gift moves the work forward.
               </p>
               {/* Funding progress hidden until there's a real campaign to report — re-enable when ready.
               <FundMeter

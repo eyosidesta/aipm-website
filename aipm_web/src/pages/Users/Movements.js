@@ -11,15 +11,15 @@ function Movements() {
         img={gather2}
         eyebrow="What We Do"
         crumb="Movements"
-        title="Four movements, one mountain"
-        description="Prayer, discipleship, mission and compassion — each rooted in the same summit where Ambaricho's story began."
+        title="Four pillars, one mountain"
+        description="Prayer, mission, training and charity — each rooted in the same summit where Ambaricho's story began."
       />
       <SubNav
         links={[
-          { href: "#prayer", label: "Prayer Movement" },
-          { href: "#students", label: "University Students" },
-          { href: "#mission", label: "Mission Movement" },
-          { href: "#ddlf", label: "Desta Langena Foundation" },
+          { href: "#prayer", label: "Prayer" },
+          { href: "#mission", label: "Mission" },
+          { href: "#training", label: "Training" },
+          { href: "#charity", label: "Charity" },
         ]}
       />
 
@@ -59,31 +59,8 @@ function Movements() {
         </div>
       </section>
 
-      <section className="alt" id="students">
+      <section className="alt" id="mission">
         <div className="wrap split rev">
-          <Reveal as="figure">
-            <img src={gather2} alt="Young people gathered in worship." />
-          </Reveal>
-          <Reveal className="split-copy">
-            <div className="eyebrow">02 &middot; University Students Movement</div>
-            <h2 style={{ marginTop: 10 }}>Raising the next generation</h2>
-            <p>
-              What began with a handful of teenagers pooling their money after a hike up Ambaricho has grown into a
-              movement that disciples young people across Ethiopia&apos;s universities and campuses.
-            </p>
-            <p>
-              Students are trained in prayer, Scripture and evangelism &mdash; many going on to become the
-              missionaries, pastors and leaders who carry the movement into its next generation.
-            </p>
-            <Link to="/get-involved" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
-              Get Involved &rarr;
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="mission">
-        <div className="wrap split">
           <Reveal as="figure">
             <img src={origin} alt="A missionary addresses a gathered crowd." />
             <figcaption>
@@ -92,7 +69,7 @@ function Movements() {
             </figcaption>
           </Reveal>
           <Reveal className="split-copy">
-            <div className="eyebrow">03 &middot; Mission Movement</div>
+            <div className="eyebrow">02 &middot; Mission</div>
             <h2 style={{ marginTop: 10 }}>Sent to the hardest places</h2>
             <p>
               Over the past 25 years, AIPM has trained and sent more than 470 missionaries across Ethiopia. Through a
@@ -114,25 +91,52 @@ function Movements() {
         </div>
       </section>
 
-      <section className="alt" id="ddlf">
+      <section id="training">
+        <div className="wrap split">
+          <Reveal as="figure">
+            <img src={gather2} alt="Young people gathered in worship." />
+          </Reveal>
+          <Reveal className="split-copy">
+            <div className="eyebrow">03 &middot; Training</div>
+            <h2 style={{ marginTop: 10 }}>Raising the next generation</h2>
+            <p>
+              What began with a handful of teenagers pooling their money after a hike up Ambaricho has grown into a
+              movement that disciples young people across Ethiopia&apos;s universities and campuses &mdash; trained in
+              prayer, Scripture and evangelism, many going on to become the missionaries, pastors and leaders who
+              carry the movement into its next generation.
+            </p>
+            <p>
+              That same vision for training is now taking permanent shape in Durame: the{" "}
+              <strong>AIPM Global Missions University</strong>, a future home to house and train missionaries from
+              Ethiopia, Africa and beyond. The land has been acquired and the curriculum developed &mdash; AIPM is
+              well on its way to training and sending thousands of missionaries for the glory of God.
+            </p>
+            <Link to="/projects/global-missions-university" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
+              About Global Missions University &rarr;
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="alt" id="charity">
         <div className="wrap split rev">
           <Reveal as="figure">
             <img src={birhan} alt="Community development work in Durame." />
           </Reveal>
           <Reveal className="split-copy">
-            <div className="eyebrow">04 &middot; Dr. Desta Langena Foundation</div>
+            <div className="eyebrow">04 &middot; Charity</div>
             <h2 style={{ marginTop: 10 }}>Compassion in Durame</h2>
             <p>
-              The Dr. Desta Langena Foundation (DDLF) is a charitable organization located in Durame, Ethiopia, that
-              exists to help men, women and children in great need through food, clothing and encouragement.
+              AIPM&apos;s charity ministry exists to help men, women and children in great need around Durame,
+              Ethiopia, through food, clothing and encouragement.
             </p>
             <p>
-              Through team building and training, DDLF provides much-needed resources to those in the greatest need
-              &mdash; the compassionate arm of the AIPM movement.
+              Through team building and training, this work provides much-needed resources to those in the greatest
+              need &mdash; the compassionate arm of the AIPM movement.
             </p>
-            <span className="sample-badge" style={{ marginTop: 6, display: "inline-block" }}>
-              DDLF&apos;s own website is coming soon
-            </span>
+            <Link to="/give" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
+              Support the Charity Ministry &rarr;
+            </Link>
           </Reveal>
         </div>
       </section>

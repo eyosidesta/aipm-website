@@ -187,7 +187,7 @@ function OurStory() {
             ))}
           </Reveal>
           <p style={{ marginTop: 28, color: "var(--text-soft)", fontSize: 15 }}>
-            AIPM USA &mdash; our US support arm &mdash; is directed by its own board and staff.{" "}
+            Want to connect with the team or learn more about the movement?{" "}
             <Link to="/contact" style={{ color: "var(--accent-deep)", fontWeight: 700, textDecoration: "none" }}>
               Get in touch &rarr;
             </Link>
