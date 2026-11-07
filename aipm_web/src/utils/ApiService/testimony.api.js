@@ -1,8 +1,6 @@
 import axios from "axios";
 import { baseUrl } from "../constants/baseURL";
 
-axios.defaults.baseURL = process.env.AIPM_API_SERVICE;
-
 export const getTestimonies = async () => {
     return await axios.get(`${baseUrl}/testimonies`).then(res => {
         return res;

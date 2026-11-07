@@ -45,4 +45,7 @@ app.use("/news", newsRoute);
 app.use("/testimonies", testimoniesRoute);
 app.use("/prayer", prayerMovementRoute);
 app.use("/staffs", staffMembersRoute);
-app.listen(3000);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`AIPM API listening on port ${PORT}`);
+});

@@ -9,17 +9,21 @@ function PlayIcon() {
   );
 }
 
-function VideoPlaceholderCard({ img, title, tag, note }) {
+function VideoPlaceholderCard({ img, title, tag, note, videoSrc }) {
   const { open } = useLightbox();
+  const hasRealVideo = Boolean(videoSrc);
+
   return (
     <button
-      className="vcard"
+      className={`vcard${hasRealVideo ? " real" : ""}`}
       onClick={() =>
-        open({
-          img,
-          title,
-          note: note || "Placeholder slot — add a real video file and wire it into this player.",
-        })
+        hasRealVideo
+          ? open({ img, title, kind: "video", videoSrc })
+          : open({
+              img,
+              title,
+              note: note || "Placeholder slot — add a real video file and wire it into this player.",
+            })
       }
     >
       <img src={img} alt="" />

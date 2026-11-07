@@ -88,7 +88,7 @@
 .aipm .mobilesheet .close{align-self:flex-end; background:none; border:none; color:#F2ECDC; font-size:26px; cursor:pointer; line-height:1;}
 
 /* ---------- Hero ---------- */
-.aipm .hero{position:relative; min-height:clamp(600px,92vh,860px); margin-top:-78px; display:flex; align-items:flex-end; overflow:hidden; background:var(--ink);}
+.aipm .hero{position:relative; min-height:clamp(600px,92vh,860px); margin-top:-78px; padding:0; display:flex; align-items:flex-end; overflow:hidden; background:var(--ink);}
 .aipm .hero .kenburns{position:absolute; inset:-3%; width:106%; height:106%; object-fit:cover; object-position:center 38%; animation:kenburns 26s ease-in-out infinite alternate;}
 .aipm .hero video.bgvideo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%;}
 @keyframes kenburns{0%{transform:scale(1) translate(0,0);}100%{transform:scale(1.1) translate(-1.5%,-1%);}}
@@ -110,20 +110,20 @@
 @keyframes cue{0%{transform:scaleY(.3); transform-origin:top;}50%{transform:scaleY(1); transform-origin:top;}100%{transform:scaleY(.3); transform-origin:bottom;}}
 
 /* ---------- Inner page banner hero ---------- */
-.aipm .pagehero{position:relative; min-height:360px; margin-top:-78px; display:flex; align-items:center; overflow:hidden; background:var(--ink);}
+.aipm .pagehero{position:relative; min-height:190px; margin-top:-78px; padding:0; display:flex; align-items:center; overflow:hidden; background:var(--ink);}
 .aipm .pagehero img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
 .aipm .pagehero::after{content:""; position:absolute; inset:0; background:linear-gradient(10deg, rgba(8,24,36,0.92) 10%, rgba(8,24,36,0.55) 60%, rgba(8,24,36,0.42) 100%);}
-.aipm .pagehero-inner{position:relative; z-index:2; padding-top:78px; width:100%;}
+.aipm .pagehero-inner{position:relative; z-index:2; padding-top:90px; padding-bottom:22px; width:100%;}
 .aipm .pagehero .eyebrow{color:var(--gold-pale);}
-.aipm .pagehero h1{color:#FBF7EC; font-size:clamp(34px,5vw,58px); font-weight:600; margin-top:10px;}
-.aipm .pagehero p{color:#DCE3E6; margin-top:14px; max-width:60ch; font-size:16.5px;}
-.aipm .crumbs{display:flex; gap:8px; align-items:center; font-size:12.5px; color:#B9C6CE; margin-top:18px;}
+.aipm .pagehero h1{color:#FBF7EC; font-size:clamp(24px,3.4vw,38px); font-weight:600; margin-top:8px;}
+.aipm .pagehero p{color:#DCE3E6; margin-top:8px; max-width:60ch; font-size:15px;}
+.aipm .crumbs{display:flex; gap:8px; align-items:center; font-size:12px; color:#B9C6CE; margin-top:10px;}
 .aipm .crumbs a{text-decoration:none; color:#B9C6CE;}
 .aipm .crumbs a:hover{color:var(--gold-pale);}
 
-.aipm .subnav{background:var(--bg-alt); border-bottom:1px solid var(--line); position:sticky; top:78px; z-index:30;}
-.aipm .subnav .wrap{display:flex; gap:10px; overflow-x:auto; padding-top:14px; padding-bottom:14px;}
-.aipm .subnav a{flex:none; font-size:13.5px; font-weight:700; letter-spacing:.02em; color:var(--text-soft); text-decoration:none; padding:8px 16px; border-radius:20px; border:1px solid var(--line); transition:all .15s ease;}
+.aipm .subnav{background:var(--bg-alt); border-bottom:1px solid var(--line); position:sticky; top:78px; z-index:30; padding:0;}
+.aipm .subnav .wrap{display:flex; gap:8px; overflow-x:auto; padding-top:9px; padding-bottom:9px;}
+.aipm .subnav a{flex:none; font-size:12.5px; font-weight:700; letter-spacing:.02em; color:var(--text-soft); text-decoration:none; padding:6px 13px; border-radius:20px; border:1px solid var(--line); transition:all .15s ease;}
 .aipm .subnav a:hover, .aipm .subnav a.active{background:var(--ink); color:#FBF7EC; border-color:var(--ink);}
 
 /* ---------- Marquee ---------- */
@@ -205,6 +205,8 @@
 .aipm .vcard{scroll-snap-align:start; flex:0 0 clamp(240px,27vw,300px); border-radius:8px; overflow:hidden; position:relative; aspect-ratio:3/4; cursor:pointer; border:none; padding:0; background:var(--ink);}
 .aipm .vcard img{width:100%; height:100%; object-fit:cover; filter:saturate(.25) brightness(.62) sepia(.25) hue-rotate(160deg); transition:transform .4s ease, filter .3s ease;}
 .aipm .vcard:hover img{transform:scale(1.06); filter:saturate(.4) brightness(.68) sepia(.2) hue-rotate(160deg);}
+.aipm .vcard.real img{filter:saturate(.9) brightness(.8);}
+.aipm .vcard.real:hover img{transform:scale(1.06); filter:saturate(1) brightness(.85);}
 .aipm .vcard::after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(8,20,30,.88) 0%, rgba(8,20,30,.1) 55%);}
 .aipm .vcard .play{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:58px; height:58px; border-radius:50%; background:rgba(251,247,236,0.14); border:1.5px solid rgba(251,247,236,0.7); display:flex; align-items:center; justify-content:center; z-index:2; transition:background .2s ease, transform .2s ease;}
 .aipm .vcard:hover .play{background:var(--accent); border-color:var(--accent); transform:translate(-50%,-50%) scale(1.08);}
@@ -296,7 +298,7 @@
 .aipm .sample-badge{display:inline-block; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); border:1px dashed var(--line); padding:4px 10px; border-radius:20px; margin-bottom:16px;}
 
 /* ---------- Give page ---------- */
-.aipm .give-hero{background:var(--ink); color:#FBF7EC; margin-top:-78px; position:relative;}
+.aipm .give-hero{background:var(--ink); color:#FBF7EC; margin-top:-78px; padding:0; position:relative;}
 .aipm .give-amounts{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:24px;}
 .aipm .amtbtn{background:rgba(251,247,236,0.06); border:1px solid rgba(251,247,236,0.2); color:#FBF7EC; border-radius:6px; padding:16px; text-align:center; font-family:"Fraunces",serif; font-size:20px; font-weight:600; cursor:pointer; transition:all .15s ease;}
 .aipm .amtbtn:hover, .aipm .amtbtn.sel{background:var(--accent); color:#201403; border-color:var(--accent);}
@@ -359,6 +361,9 @@
 .aipm .vphold .ring svg{width:20px;height:20px;}
 .aipm .vphold strong{color:#FBF7EC; font-family:"Fraunces",serif; font-size:19px; font-weight:600;}
 .aipm .vphold span{color:#CBD4D8; font-size:13px; max-width:34ch;}
+.aipm .lightbox .box.image-box{aspect-ratio:auto; max-height:84vh; background:transparent; box-shadow:none; display:flex; flex-direction:column; align-items:center;}
+.aipm .lightbox .box.image-box img{width:auto; height:auto; max-width:100%; max-height:76vh; object-fit:contain; border-radius:6px; box-shadow:0 40px 80px -20px rgba(0,0,0,0.6);}
+.aipm .lightbox .image-caption{margin-top:14px; color:#F3EEE0; font-size:14px; text-align:center;}
 
 @media (max-width:980px){
   .aipm .navlinks{display:none;}

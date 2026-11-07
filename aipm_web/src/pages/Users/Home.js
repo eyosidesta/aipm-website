@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../../components/Shared/Reveal";
 import Marquee from "../../components/Shared/Marquee";
-import VideoPlaceholderCard from "../../components/Shared/VideoPlaceholderCard";
-import { Meter, FundMeter, Steps } from "../../components/Shared/Meter";
+// VideoPlaceholderCard is unused while the Voices section is hidden — see below.
+import { Meter } from "../../components/Shared/Meter";
 import { useLightbox } from "../../context/LightboxContext";
-import { hero, origin, founder, birhan, cross, gather2 } from "../../assets/siteImages";
+import { hero, origin, founder, birhan, cross } from "../../assets/siteImages";
 
 function PlayIcon() {
   return (
@@ -61,12 +61,13 @@ const MOVEMENTS = [
   },
 ];
 
-const VOICES = [
-  { img: origin, tag: "Mission Movement", title: "A missionary's testimony" },
-  { img: hero, tag: "Prayer Movement", title: "Why we climb every January" },
-  { img: gather2, tag: "Students", title: "A new generation of intercessors" },
-  { img: birhan, tag: "Birhan Building", title: "Building a home for prayer" },
-];
+// Voices (video testimonies) hidden for now — see commented section below.
+// const VOICES = [
+//   { img: origin, tag: "Mission Movement", title: "A missionary's testimony" },
+//   { img: hero, tag: "Prayer Movement", title: "Why we climb every January" },
+//   { img: gather2, tag: "Students", title: "A new generation of intercessors" },
+//   { img: birhan, tag: "Birhan Building", title: "Building a home for prayer" },
+// ];
 
 function Home() {
   const { open } = useLightbox();
@@ -105,7 +106,8 @@ function Home() {
                 open({
                   img: hero,
                   title: "The Annual Gathering",
-                  note: "Placeholder footage — drop your own gathering video into /public/videos when it's ready.",
+                  kind: "video",
+                  videoSrc: "/videos/hero.mp4",
                 })
               }
             >
@@ -237,6 +239,7 @@ function Home() {
         </div>
       </section>
 
+      {/* Voices section hidden until there's real video to show — re-enable once footage is ready.
       <section className="alt" id="voices">
         <div className="wrap">
           <Reveal className="section-head">
@@ -244,7 +247,7 @@ function Home() {
               <div className="eyebrow">Voices</div>
               <h2>Stories from the mountain</h2>
             </div>
-            <p>Short video testimonies from missionaries, students and families &mdash; placeholders, ready for your footage.</p>
+            <p>Short video testimonies from missionaries, students and families — placeholders, ready for your footage.</p>
           </Reveal>
           <Reveal className="rail-shell">
             <div className="rail">
@@ -255,6 +258,7 @@ function Home() {
           </Reveal>
         </div>
       </section>
+      */}
 
       <section id="projects">
         <div className="wrap">
@@ -270,7 +274,7 @@ function Home() {
             </p>
           </Reveal>
           <Reveal className="projects-grid" stagger>
-            <div className="project-card" style={{ "--i": 0 }}>
+            <Link to="/projects/birhan-building" className="project-card" style={{ "--i": 0, textDecoration: "none" }}>
               <div className="img-wrap">
                 <img src={birhan} alt="Construction of the concrete foundation for the Birhan Building on Mount Ambaricho." />
                 <span className="status-pill dot">Under construction</span>
@@ -280,24 +284,17 @@ function Home() {
                 <p>A 7-story building in Durame for retail, food and medical services, leader training and missionary housing.</p>
                 <Meter label="Construction progress" percent={62} />
               </div>
-            </div>
-            <div className="project-card" style={{ "--i": 1 }}>
+            </Link>
+            <Link to="/projects/cross-project" className="project-card" style={{ "--i": 1, textDecoration: "none" }}>
               <div className="img-wrap">
-                <img src={cross} alt="Architectural rendering of the planned cross monument on Mount Ambaricho's summit." />
-                <span className="status-pill dot">Coming soon</span>
+                <img src={cross} alt="Foundation work for the cross monument on Mount Ambaricho's summit." />
+                <span className="status-pill dot">In planning</span>
               </div>
               <div className="body">
-                <h3>Global Missions University</h3>
-                <p>Land acquired, curriculum developed &mdash; a future home to train missionaries from Ethiopia, Africa and beyond.</p>
-                <Steps
-                  steps={[
-                    { label: "Land", done: true },
-                    { label: "Curriculum", done: true },
-                    { label: "Campus", done: false },
-                  ]}
-                />
+                <h3>Cross Project</h3>
+                <p>A monument crowning the summit once worshipped as a seat of witchcraft &mdash; now marked by the cross.</p>
               </div>
-            </div>
+            </Link>
           </Reveal>
         </div>
       </section>
@@ -318,12 +315,14 @@ function Home() {
                 It costs $100&ndash;$300 a month to fully support a missionary family. AIPM USA raises up to half
                 &mdash; the rest comes from partners like you.
               </p>
+              {/* Funding progress hidden until there's a real campaign to report — re-enable when ready.
               <FundMeter
                 raisedLabel="$48,200 raised"
                 goalLabel="Goal: $120,000"
                 percent={40}
                 note="Toward Birhan Hall — placeholder figures, ready for your real campaign numbers."
               />
+              */}
             </Reveal>
             <Reveal className="actions">
               <Link to="/give" className="btn btn-gold">

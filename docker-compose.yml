@@ -4,11 +4,13 @@ services:
   web:
     build: ./aipm_web
     ports:
-      - 80:3000
+      - 80:80
     restart: unless-stopped
 
   api:
     build: ./aipm_api
+    env_file: ./aipm_api/.env
     ports:
-      - 3001:3001
-  
+      - 3001:3000
+    restart: unless-stopped
+

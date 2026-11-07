@@ -6,7 +6,7 @@ import { gather2 } from "../../assets/siteImages";
 function ContactUs() {
   return (
     <>
-      <PageHero img={gather2} eyebrow="Get In Touch" crumb="Contact" title="We'd love to hear from you" minHeight={300} />
+      <PageHero img={gather2} eyebrow="Get In Touch" crumb="Contact" title="We'd love to hear from you" />
 
       <section>
         <Reveal className="wrap grid2" stagger>

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Reveal from "../../components/Shared/Reveal";
-import { FundMeter } from "../../components/Shared/Meter";
 
-const AMOUNTS = ["$25", "$100", "$300", "Other"];
+// Amount picker + donation buttons below are disabled until a real payment
+// processor is connected — see the commented-out blocks in this file.
 
 const WAYS_TO_GIVE = [
   {
@@ -20,8 +20,6 @@ const WAYS_TO_GIVE = [
 ];
 
 function Give() {
-  const [selected, setSelected] = useState("$100");
-
   return (
     <>
       <section className="give-hero">
@@ -37,6 +35,7 @@ function Give() {
             financial support &mdash; as partners in the work with AIPM and the Ethiopian churches who send and
             support their own missionaries and evangelists.
           </p>
+          {/* Donation flow hidden until a real payment processor is connected — re-enable when ready.
           <div style={{ marginTop: 28, maxWidth: 420 }}>
             <div className="give-amounts">
               {AMOUNTS.map((amount) => (
@@ -57,6 +56,7 @@ function Give() {
               Placeholder checkout &mdash; connect your real payment processor when ready.
             </p>
           </div>
+          */}
         </div>
       </section>
 
@@ -112,15 +112,19 @@ function Give() {
             <p>Retail, food and medical services, leader training, and missionary housing &mdash; all under one roof.</p>
           </Reveal>
           <Reveal style={{ maxWidth: 480 }}>
+            {/* Funding progress hidden until there's a real campaign to report — re-enable when ready.
             <FundMeter
               raisedLabel="$48,200 raised"
               goalLabel="Goal: $120,000"
               percent={40}
               note="Placeholder figures, ready for your real campaign numbers."
             />
+            */}
+            {/* Donation button hidden until a real payment processor is connected — re-enable when ready.
             <a href="#donate" className="btn btn-gold" style={{ marginTop: 20 }}>
               Give Toward Birhan Hall
             </a>
+            */}
           </Reveal>
         </div>
       </section>

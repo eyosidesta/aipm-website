@@ -1,6 +1,7 @@
 import axios from "axios";
+import { baseUrl } from "../constants/baseURL";
 
-axios.defaults.baseURL = process.env.AIPM_API_SERVICE;
+axios.defaults.baseURL = baseUrl;
 
 export const post = async (route, body) => {
     return await axios.post(route, {body}).then(res => {

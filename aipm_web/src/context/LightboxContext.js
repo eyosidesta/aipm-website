@@ -5,8 +5,8 @@ const LightboxContext = createContext(null);
 export function LightboxProvider({ children }) {
   const [state, setState] = useState(null);
 
-  const open = useCallback(({ title, note, img }) => {
-    setState({ title, note, img });
+  const open = useCallback((payload) => {
+    setState(payload);
   }, []);
   const close = useCallback(() => setState(null), []);
 
