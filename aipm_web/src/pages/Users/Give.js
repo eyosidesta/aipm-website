@@ -69,7 +69,71 @@ function Give() {
         </div>
       </section>
 
+      <section className="alt">
+        <div className="wrap narrow">
+          <Reveal className="section-head">
+            <div>
+              <div className="eyebrow">Direct Bank Transfer</div>
+              <h2>Give directly to AIPM Ethiopia</h2>
+            </div>
+            <p>Prefer a bank transfer? Use the account details below.</p>
+          </Reveal>
+          <Reveal className="loccard" style={{ maxWidth: 480 }}>
+            <div className="bankrow">
+              <span className="k">Beneficiary Name</span>
+              <span className="v">Ambaricho International Prayer and Missions Movement (AIPM)</span>
+            </div>
+            <div className="bankrow">
+              <span className="k">Bank Name</span>
+              <span className="v">Berhan Bank</span>
+            </div>
+            <div className="bankrow">
+              <span className="k">Account Number</span>
+              <span className="v">1030988376909</span>
+            </div>
+            <div className="bankrow">
+              <span className="k">SWIFT Code</span>
+              <span className="v">BERHETAA</span>
+            </div>
+            <div className="bankrow">
+              <span className="k">Country</span>
+              <span className="v">Ethiopia</span>
+            </div>
+            <div className="bankrow">
+              <span className="k">Address</span>
+              <span className="v">Zeraro Kebele, Durame Town, Kambatta Zone, Central Region, Ethiopia</span>
+            </div>
+            <p style={{ color: "var(--text-faint)", fontSize: 13, marginTop: 14 }}>
+              Questions about a transfer? Reach out via the{" "}
+              <Link to="/contact" style={{ color: "var(--accent-deep)", fontWeight: 700, textDecoration: "none" }}>
+                Contact page
+              </Link>
+              .
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       <section>
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <div className="eyebrow">Where Your Gift Goes</div>
+              <h2>Four pillars, one mountain</h2>
+            </div>
+          </Reveal>
+          <Reveal className="givecats" stagger>
+            {GIVE_CATEGORIES.map((cat, i) => (
+              <div className="waygive" key={cat.title} style={{ "--i": i }}>
+                <h3>{cat.title}</h3>
+                <p>{cat.body}</p>
+              </div>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="alt">
         <div className="wrap narrow">
           <Reveal className="section-head">
             <div>
@@ -87,25 +151,6 @@ function Give() {
               There&apos;s no set amount &mdash; give whatever you&apos;re able to, one-time or monthly, toward
               whichever part of the work God lays on your heart.
             </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="alt">
-        <div className="wrap">
-          <Reveal className="section-head">
-            <div>
-              <div className="eyebrow">Where Your Gift Goes</div>
-              <h2>Four pillars, one mountain</h2>
-            </div>
-          </Reveal>
-          <Reveal className="givecats" stagger>
-            {GIVE_CATEGORIES.map((cat, i) => (
-              <div className="waygive" key={cat.title} style={{ "--i": i }}>
-                <h3>{cat.title}</h3>
-                <p>{cat.body}</p>
-              </div>
-            ))}
           </Reveal>
         </div>
       </section>
@@ -129,47 +174,7 @@ function Give() {
         </div>
       </section>
 
-      <section className="alt">
-        <div className="wrap narrow">
-          <Reveal className="section-head">
-            <div>
-              <div className="eyebrow">Direct Bank Transfer</div>
-              <h2>Give directly to AIPM Ethiopia</h2>
-            </div>
-            <p>Prefer a bank transfer? Use the account details below.</p>
-          </Reveal>
-          <Reveal className="loccard" style={{ maxWidth: 480 }}>
-            <span className="sample-badge" style={{ marginBottom: 6 }}>
-              Bank details coming soon
-            </span>
-            <div className="bankrow">
-              <span className="k">Bank Name</span>
-              <span className="v">&mdash;</span>
-            </div>
-            <div className="bankrow">
-              <span className="k">Account Name</span>
-              <span className="v">&mdash;</span>
-            </div>
-            <div className="bankrow">
-              <span className="k">Account Number</span>
-              <span className="v">&mdash;</span>
-            </div>
-            <div className="bankrow">
-              <span className="k">Branch / SWIFT</span>
-              <span className="v">&mdash;</span>
-            </div>
-            <p style={{ color: "var(--text-faint)", fontSize: 13, marginTop: 14 }}>
-              In the meantime, reach out via the{" "}
-              <Link to="/contact" style={{ color: "var(--accent-deep)", fontWeight: 700, textDecoration: "none" }}>
-                Contact page
-              </Link>{" "}
-              for current transfer details.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="birhan">
+      <section className="alt" id="birhan">
         <div className="wrap narrow">
           <Reveal className="section-head">
             <div>

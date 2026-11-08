@@ -35,7 +35,11 @@ function ContactUs() {
           <div className="loccard" style={{ "--i": 0, maxWidth: 480 }}>
             <div className="eyebrow">Ethiopia</div>
             <h3>AIPM &mdash; Durame</h3>
-            <div className="addr">The movement&apos;s home &mdash; six hours south of Addis Ababa, near Mount Ambaricho.</div>
+            <div className="addr">
+              Zeraro Kebele, Durame Town
+              <br />
+              Kambatta Zone, Central Region, Ethiopia
+            </div>
           </div>
         </Reveal>
       </section>
