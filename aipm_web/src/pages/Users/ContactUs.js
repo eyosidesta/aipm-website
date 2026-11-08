@@ -4,7 +4,7 @@ import Reveal from "../../components/Shared/Reveal";
 import { gather2 } from "../../assets/siteImages";
 import { sendContactMessage } from "../../utils/ApiService/contact.api";
 
-const INITIAL_FORM = { name: "", email: "", reason: "General question", message: "" };
+const INITIAL_FORM = { name: "", phone: "", email: "", reason: "General question", message: "" };
 
 function ContactUs() {
   const [form, setForm] = useState(INITIAL_FORM);
@@ -59,8 +59,12 @@ function ContactUs() {
                 <input type="text" name="name" placeholder="Your name" value={form.name} onChange={handleChange} required />
               </div>
               <div className="field">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="you@example.com" value={form.email} onChange={handleChange} required />
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="Your phone number" value={form.phone} onChange={handleChange} required />
+              </div>
+              <div className="field">
+                <label>Email (optional)</label>
+                <input type="email" name="email" placeholder="you@example.com" value={form.email} onChange={handleChange} />
               </div>
               <div className="field full">
                 <label>Reason for contact</label>

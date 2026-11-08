@@ -4,15 +4,15 @@ const sucessMessage = require("../utils/success_messages");
 const errorMessage = require("../utils/error_messages");
 
 exports.add_contact = async (req, res) => {
-    const { name, email, reason, message } = req.body;
-    if (!name || !email || !message) {
+    const { name, phone, email, reason, message } = req.body;
+    if (!name || !phone || !message) {
         res
             .status(400)
-            .json(response.failure_response("name, email and message are required", 400, null));
+            .json(response.failure_response("name, phone and message are required", 400, null));
         return;
     }
     try {
-        const newContact = await Contact.create({ name, email, reason, message });
+        const newContact = await Contact.create({ name, phone, email, reason, message });
         res
             .status(201)
             .json(response.success_response(sucessMessage.added_message("Message"), 201, newContact));

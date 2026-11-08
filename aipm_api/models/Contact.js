@@ -6,9 +6,13 @@ const Contact = db.define('contacts', {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    email: {
+    phone: {
         type: Sequelize.STRING,
         allowNull: false,
+    },
+    email: {
+        type: Sequelize.STRING,
+        allowNull: true,
     },
     reason: {
         type: Sequelize.STRING,
