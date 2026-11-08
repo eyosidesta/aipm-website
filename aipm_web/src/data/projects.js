@@ -1,5 +1,14 @@
-import { birhanGallery, crossGallery, birhanCover, crossCover, birhanVideos } from "../assets/projectGalleries";
-import { gather2 } from "../assets/siteImages";
+import {
+  birhanGallery,
+  crossGallery,
+  birhanCover,
+  crossCover,
+  birhanVideos,
+  charityGallery,
+  charityCover,
+  trainingGallery,
+  trainingTeaching,
+} from "../assets/projectGalleries";
 
 // heroImage: null means no real photo yet — the detail page renders a
 // clearly-labeled placeholder instead of an unrelated real photo.
@@ -43,6 +52,22 @@ export const PROJECTS = [
     videos: [],
   },
   {
+    slug: "training",
+    eyebrow: "Discipleship",
+    title: "Training",
+    status: "Ongoing",
+    summary:
+      "Discipling students and leaders across Ethiopia's universities and campuses — raising up the next generation of intercessors and missionaries.",
+    heroImage: trainingTeaching,
+    body: [
+      "What began with a handful of teenagers pooling their money after a hike up Ambaricho has grown into a movement that disciples young people across Ethiopia's universities and campuses — trained in prayer, Scripture and evangelism, many going on to become the missionaries, pastors and leaders who carry the movement into its next generation.",
+      "Pastors, leaders and students gather regularly for training conferences — teaching from the Word, times of worship and prayer, and practical preparation for ministry.",
+      "That same vision for training is now taking permanent shape in Durame: the AIPM Global Missions University, a future home to house and train missionaries from Ethiopia, Africa and beyond.",
+    ],
+    gallery: trainingGallery,
+    videos: [],
+  },
+  {
     slug: "global-missions-university",
     eyebrow: "Coming Soon",
     title: "AIPM Global Missions University",
@@ -50,7 +75,7 @@ export const PROJECTS = [
     summary:
       "Land acquired, curriculum developed — a future home to train missionaries from Ethiopia, Africa and beyond.",
     heroImage: null,
-    heroPlaceholderLabel: "GMU photos coming soon",
+    heroPlaceholderLabel: "GMU",
     body: [
       "God has given AIPM a vision for a global missionary training university in Durame, Ethiopia. The AIPM Global Missions University (AIPM GMU) will house and train missionaries from all over Ethiopia, Africa, and beyond.",
       "The land for AIPM GMU has been acquired, the curriculum has been developed, and AIPM is well on its way to training and sending thousands of missionaries for the glory of God.",
@@ -71,7 +96,7 @@ export const PROJECTS = [
     summary:
       "A poultry facility, grain development, and chicken and egg sales that help fund the ongoing ministry.",
     heroImage: null,
-    heroPlaceholderLabel: "Photos coming soon",
+    heroPlaceholderLabel: "The Chicken Project",
     body: [
       "Not every project is a building. AIPM's Chicken Project — managing a poultry facility, grain development, and chicken and egg sales — is one of the practical, ongoing ways missionaries are supported day to day.",
       "It's a small but steady picture of how the movement sustains itself: prayer on the mountain, and practical provision on the ground.",
@@ -82,16 +107,18 @@ export const PROJECTS = [
   {
     slug: "charity",
     eyebrow: "Compassion",
-    title: "AIPM Charity Ministry",
+    title: "Charity",
     status: "Ongoing",
     summary:
-      "Food, clothing and encouragement for men, women and children in great need around Durame.",
-    heroImage: gather2,
+      "AIPM's Humanitarian Aid and Social Development ministry — homes, holiday food and school support for families in great need around Durame.",
+    heroImage: charityCover,
     body: [
-      "AIPM's charity ministry exists in Durame, Ethiopia, to help men, women and children in great need through food, clothing and encouragement.",
-      "Through team building and training, this work provides much-needed resources to those in the greatest need — the compassionate arm of the AIPM movement.",
+      "AIPM's Humanitarian Aid and Social Development ministry exists in Durame, Ethiopia, to meet practical, everyday needs for men, women and children in great need — a tangible expression of the compassion at the heart of the movement.",
+      "Families without stable housing have received newly built homes — a lasting foundation for parents and children to rebuild their lives on.",
+      "Each Christmas and during other holidays, families across the community receive food support, so no one goes without during the season.",
+      "For students, the ministry has provided school documents and supplies — the paperwork and materials children need to stay enrolled and keep learning.",
     ],
-    gallery: [],
+    gallery: charityGallery,
     videos: [],
   },
 ];

@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { PageHero, SubNav } from "../../components/Shared/PageHero";
 import Reveal from "../../components/Shared/Reveal";
-import { hero, origin, birhan, gather2 } from "../../assets/siteImages";
+import { hero, origin, gather2 } from "../../assets/siteImages";
+import { charityCover, trainingTeaching } from "../../assets/projectGalleries";
 
 function Movements() {
   return (
@@ -94,7 +95,7 @@ function Movements() {
       <section id="training">
         <div className="wrap split">
           <Reveal as="figure">
-            <img src={gather2} alt="Young people gathered in worship." />
+            <img src={trainingTeaching} alt="Leaders teaching at an AIPM training gathering." />
           </Reveal>
           <Reveal className="split-copy">
             <div className="eyebrow">03 &middot; Training</div>
@@ -111,8 +112,8 @@ function Movements() {
               Ethiopia, Africa and beyond. The land has been acquired and the curriculum developed &mdash; AIPM is
               well on its way to training and sending thousands of missionaries for the glory of God.
             </p>
-            <Link to="/projects/global-missions-university" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
-              About Global Missions University &rarr;
+            <Link to="/projects/training" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
+              See How We Train &rarr;
             </Link>
           </Reveal>
         </div>
@@ -121,21 +122,21 @@ function Movements() {
       <section className="alt" id="charity">
         <div className="wrap split rev">
           <Reveal as="figure">
-            <img src={birhan} alt="Community development work in Durame." />
+            <img src={charityCover} alt="AIPM's Humanitarian Aid and Social Development team at a community event." />
           </Reveal>
           <Reveal className="split-copy">
             <div className="eyebrow">04 &middot; Charity</div>
             <h2 style={{ marginTop: 10 }}>Compassion in Durame</h2>
             <p>
-              AIPM&apos;s charity ministry exists to help men, women and children in great need around Durame,
-              Ethiopia, through food, clothing and encouragement.
+              AIPM&apos;s Humanitarian Aid and Social Development ministry exists to help men, women and children in
+              great need around Durame, Ethiopia, through food, clothing and encouragement.
             </p>
             <p>
               Through team building and training, this work provides much-needed resources to those in the greatest
               need &mdash; the compassionate arm of the AIPM movement.
             </p>
-            <Link to="/give" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
-              Support the Charity Ministry &rarr;
+            <Link to="/projects/charity" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
+              See How We Help &rarr;
             </Link>
           </Reveal>
         </div>

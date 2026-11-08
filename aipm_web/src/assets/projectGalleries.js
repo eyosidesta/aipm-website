@@ -18,6 +18,26 @@ import crossFive from "./ProjectImages/CrossProject/crossProjectFive.png";
 import crossSix from "./ProjectImages/CrossProject/crossProjectSix.png";
 import crossSeven from "./ProjectImages/CrossProject/crossProjectSeven.png";
 
+import charityCover from "./ProjectImages/Charity/charityCover.jpg";
+import charityTeamEvent from "./ProjectImages/Charity/charityTeamEvent.jpg";
+import charityFoodDistribution from "./ProjectImages/Charity/charityFoodDistribution.jpg";
+import charityDedication from "./ProjectImages/Charity/charityDedication.jpg";
+import charityNewHome from "./ProjectImages/Charity/charityNewHome.jpg";
+import charityHomeFoundation from "./ProjectImages/Charity/charityHomeFoundation.jpg";
+import charitySchoolSuppliesSpeech from "./ProjectImages/Charity/charitySchoolSuppliesSpeech.jpg";
+import charityOldHome from "./ProjectImages/Charity/charityOldHome.jpg";
+import charitySchoolSuppliesBoxes from "./ProjectImages/Charity/charitySchoolSuppliesBoxes.jpg";
+import charityStudentsGathering from "./ProjectImages/Charity/charityStudentsGathering.jpg";
+
+import trainingTeaching from "./ProjectImages/Training/trainingTeaching.jpg";
+import trainingWorship from "./ProjectImages/Training/trainingWorship.jpg";
+import trainingPrayer from "./ProjectImages/Training/trainingPrayer.jpg";
+import trainingLeadingWorship from "./ProjectImages/Training/trainingLeadingWorship.jpg";
+import trainingAudience from "./ProjectImages/Training/trainingAudience.jpg";
+import trainingNoteTaking from "./ProjectImages/Training/trainingNoteTaking.jpg";
+import trainingPackedHall from "./ProjectImages/Training/trainingPackedHall.jpg";
+import trainingCelebration from "./ProjectImages/Training/trainingCelebration.jpg";
+
 export const birhanGallery = [
   { src: birhanOne, caption: "Foundation excavation, Durame" },
   { src: birhanTwo, caption: "Pouring the foundation slab" },
@@ -44,5 +64,28 @@ export const birhanVideos = [
   { poster: birhanVideoPosterTwo, src: "/videos/birhan-2.mp4", caption: "Walking the building's exterior" },
 ];
 
+export const charityGallery = [
+  { src: charityTeamEvent, caption: "The team at a Heart for the Hurting event" },
+  { src: charityFoodDistribution, caption: "Food distributed to families in need" },
+  { src: charityNewHome, caption: "A newly built home for a family in need" },
+  { src: charityHomeFoundation, caption: "Foundation work underway for a new home" },
+  { src: charityOldHome, caption: "A family's home before AIPM's support" },
+  { src: charitySchoolSuppliesBoxes, caption: "School supplies ready for distribution" },
+  { src: charitySchoolSuppliesSpeech, caption: "Distributing school supplies to students" },
+  { src: charityStudentsGathering, caption: "Students gathered to receive school supplies" },
+  { src: charityDedication, caption: "Prayer and dedication at a community event" },
+];
+
+export const trainingGallery = [
+  { src: trainingNoteTaking, caption: "Leaders take notes during a teaching session" },
+  { src: trainingPackedHall, caption: "A packed hall for the training gathering" },
+  { src: trainingAudience, caption: "Pastors and leaders gathered for training" },
+  { src: trainingWorship, caption: "Worship during an AIPM training gathering" },
+  { src: trainingLeadingWorship, caption: "Leading worship and prayer at the gathering" },
+  { src: trainingPrayer, caption: "A leader prays over the congregation" },
+  { src: trainingCelebration, caption: "Celebrating together at the close of a session" },
+];
+
 export const birhanCover = birhanOne;
 export const crossCover = crossImage;
+export { charityCover, trainingTeaching };

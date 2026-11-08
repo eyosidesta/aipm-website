@@ -78,20 +78,6 @@ function ProjectDetail() {
           </div>
         </section>
       )}
-      {project.gallery.length === 0 && (
-        <section className="alt">
-          <div className="wrap narrow">
-            <Reveal className="section-head">
-              <div>
-                <div className="eyebrow">Photos</div>
-                <h2>Coming soon</h2>
-              </div>
-              <p>We don&apos;t have photos for this project yet — check back soon.</p>
-            </Reveal>
-          </div>
-        </section>
-      )}
-
       {project.videos.length > 0 && (
         <section>
           <div className="wrap">
