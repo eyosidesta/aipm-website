@@ -309,8 +309,10 @@
 .aipm .waygive p{color:var(--text-soft); font-size:14.5px; line-height:1.6;}
 .aipm .bankrow{display:flex; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:1px solid var(--line); font-size:14.5px;}
 .aipm .bankrow:last-child{border-bottom:none;}
-.aipm .bankrow .k{color:var(--text-faint);}
+.aipm .bankrow .k{color:var(--text-faint); flex-shrink:0;}
 .aipm .bankrow .v{font-weight:700; color:var(--text);}
+.aipm .bankgrid{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;}
+.aipm .bankrow .v{text-align:right;}
 .aipm .fund{margin-top:28px; max-width:460px;}
 .aipm .fund .row{display:flex; justify-content:space-between; font-size:13px; font-weight:700; margin-bottom:8px;}
 .aipm .fund .track{height:9px; border-radius:5px; background:rgba(36,23,5,0.14); overflow:hidden;}
@@ -371,6 +373,7 @@
 .aipm .lightbox .image-caption{margin-top:14px; color:#F3EEE0; font-size:14px; text-align:center;}
 
 @media (max-width:980px){
+  .aipm .bankgrid{grid-template-columns:1fr;}
   .aipm .navlinks{display:none;}
   .aipm .navtoggle{display:flex;}
   .aipm .navcta .btn{display:none;}

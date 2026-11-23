@@ -6,6 +6,21 @@ import Reveal from "../../components/Shared/Reveal";
 // processor is connected — see the commented-out blocks in this file.
 // Giving is by whatever amount the partner chooses — no preset amounts.
 
+// Both accounts are at Berhan Bank with the same beneficiary, SWIFT code and
+// address — only the account number differs. Foreign currency is listed first.
+const BANK_ACCOUNTS = [
+  {
+    eyebrow: "Foreign Currency (USD)",
+    title: "For international transfers in US dollars",
+    number: "2650980021394",
+  },
+  {
+    eyebrow: "Local Currency (In Ethiopia)",
+    title: "For transfers from within Ethiopia",
+    number: "1030988376909",
+  },
+];
+
 const GIVE_CATEGORIES = [
   {
     title: "Prayer & Mission",
@@ -70,47 +85,55 @@ function Give() {
       </section>
 
       <section className="alt">
-        <div className="wrap narrow">
+        <div className="wrap">
           <Reveal className="section-head">
             <div>
               <div className="eyebrow">Direct Bank Transfer</div>
               <h2>Give directly to AIPM Ethiopia</h2>
             </div>
-            <p>Prefer a bank transfer? Use the account details below.</p>
+            <p>Prefer a bank transfer? Choose the account that matches where you are giving from.</p>
           </Reveal>
-          <Reveal className="loccard" style={{ maxWidth: 480 }}>
-            <div className="bankrow">
-              <span className="k">Beneficiary Name</span>
-              <span className="v">Ambaricho International Prayer and Missions Movement (AIPM)</span>
-            </div>
-            <div className="bankrow">
-              <span className="k">Bank Name</span>
-              <span className="v">Berhan Bank</span>
-            </div>
-            <div className="bankrow">
-              <span className="k">Account Number</span>
-              <span className="v">1030988376909</span>
-            </div>
-            <div className="bankrow">
-              <span className="k">SWIFT Code</span>
-              <span className="v">BERHETAA</span>
-            </div>
-            <div className="bankrow">
-              <span className="k">Country</span>
-              <span className="v">Ethiopia</span>
-            </div>
-            <div className="bankrow">
-              <span className="k">Address</span>
-              <span className="v">Zeraro Kebele, Durame Town, Kambatta Zone, Central Region, Ethiopia</span>
-            </div>
-            <p style={{ color: "var(--text-faint)", fontSize: 13, marginTop: 14 }}>
-              Questions about a transfer? Reach out via the{" "}
-              <Link to="/contact" style={{ color: "var(--accent-deep)", fontWeight: 700, textDecoration: "none" }}>
-                Contact page
-              </Link>
-              .
-            </p>
-          </Reveal>
+          <div className="bankgrid">
+            {BANK_ACCOUNTS.map((account) => (
+              <Reveal key={account.number} className="loccard">
+                <div className="eyebrow">{account.eyebrow}</div>
+                <h3>{account.title}</h3>
+                <div>
+                  <div className="bankrow">
+                    <span className="k">Beneficiary Name</span>
+                    <span className="v">Ambaricho International Prayer and Missions Movement (AIPM)</span>
+                  </div>
+                  <div className="bankrow">
+                    <span className="k">Bank Name</span>
+                    <span className="v">Berhan Bank</span>
+                  </div>
+                  <div className="bankrow">
+                    <span className="k">Account Number</span>
+                    <span className="v">{account.number}</span>
+                  </div>
+                  <div className="bankrow">
+                    <span className="k">SWIFT Code</span>
+                    <span className="v">BERHETAA</span>
+                  </div>
+                  <div className="bankrow">
+                    <span className="k">Country</span>
+                    <span className="v">Ethiopia</span>
+                  </div>
+                  <div className="bankrow">
+                    <span className="k">Address</span>
+                    <span className="v">Zeraro Kebele, Durame Town, Kambatta Zone, Central Region, Ethiopia</span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <p style={{ color: "var(--text-faint)", fontSize: 13, marginTop: 18 }}>
+            Questions about a transfer? Reach out via the{" "}
+            <Link to="/contact" style={{ color: "var(--accent-deep)", fontWeight: 700, textDecoration: "none" }}>
+              Contact page
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

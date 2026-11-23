@@ -38,6 +38,15 @@ import trainingNoteTaking from "./ProjectImages/Training/trainingNoteTaking.jpg"
 import trainingPackedHall from "./ProjectImages/Training/trainingPackedHall.jpg";
 import trainingCelebration from "./ProjectImages/Training/trainingCelebration.jpg";
 
+import gmuCover from "./ProjectImages/GMU/gmuCover.jpg";
+import gmuGate from "./ProjectImages/GMU/gmuGate.jpg";
+import gmuSitePlan from "./ProjectImages/GMU/gmuSitePlan.jpg";
+import gmuAerialBuildings from "./ProjectImages/GMU/gmuAerialBuildings.jpg";
+import gmuCourtyard from "./ProjectImages/GMU/gmuCourtyard.jpg";
+import gmuAerialClinic from "./ProjectImages/GMU/gmuAerialClinic.jpg";
+import gmuEntranceAerial from "./ProjectImages/GMU/gmuEntranceAerial.jpg";
+import gmuMainAvenue from "./ProjectImages/GMU/gmuMainAvenue.jpg";
+
 export const birhanGallery = [
   { src: birhanOne, caption: "Foundation excavation, Durame" },
   { src: birhanTwo, caption: "Pouring the foundation slab" },
@@ -86,6 +95,17 @@ export const trainingGallery = [
   { src: trainingCelebration, caption: "Celebrating together at the close of a session" },
 ];
 
+export const gmuGallery = [
+  { src: gmuCover, caption: "The main campus gate — Gospel for All Nations" },
+  { src: gmuGate, caption: "The campus entrance, seen from the road" },
+  { src: gmuMainAvenue, caption: "The main avenue and administration building" },
+  { src: gmuEntranceAerial, caption: "Looking down the main avenue from above the gate" },
+  { src: gmuAerialClinic, caption: "Aerial view of the campus, with the clinic near the entrance" },
+  { src: gmuAerialBuildings, caption: "Academic and residential buildings from above" },
+  { src: gmuCourtyard, caption: "Gardens and walkways around the central roundabout" },
+  { src: gmuSitePlan, caption: "Site plan of the full campus" },
+];
+
 export const birhanCover = birhanOne;
 export const crossCover = crossImage;
-export { charityCover, trainingTeaching };
+export { charityCover, trainingTeaching, gmuCover };

@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import Reveal from "../../components/Shared/Reveal";
 import Marquee from "../../components/Shared/Marquee";
 // VideoPlaceholderCard is unused while the Voices section is hidden — see below.
-import { Meter } from "../../components/Shared/Meter";
+import { Meter, Steps } from "../../components/Shared/Meter";
 import { useLightbox } from "../../context/LightboxContext";
-import { hero, origin, founder, birhan, cross } from "../../assets/siteImages";
+import { hero, origin, founder, birhan } from "../../assets/siteImages";
+import { gmuCover } from "../../assets/projectGalleries";
 
 function PlayIcon() {
   return (
@@ -285,14 +286,21 @@ function Home() {
                 <Meter label="Construction progress" percent={62} />
               </div>
             </Link>
-            <Link to="/projects/cross-project" className="project-card" style={{ "--i": 1, textDecoration: "none" }}>
+            <Link to="/projects/global-missions-university" className="project-card" style={{ "--i": 1, textDecoration: "none" }}>
               <div className="img-wrap">
-                <img src={cross} alt="Foundation work for the cross monument on Mount Ambaricho's summit." />
-                <span className="status-pill dot">In planning</span>
+                <img src={gmuCover} alt="Architectural rendering of the main gate of the AIPM Global Missions University campus." />
+                <span className="status-pill dot">Coming soon</span>
               </div>
               <div className="body">
-                <h3>Cross Project</h3>
-                <p>A monument crowning the summit once worshipped as a seat of witchcraft &mdash; now marked by the cross.</p>
+                <h3>AIPM Global Missions University</h3>
+                <p>Land acquired, curriculum developed &mdash; a future home to train missionaries from Ethiopia, Africa and beyond.</p>
+                <Steps
+                  steps={[
+                    { label: "Land Acquired", done: true },
+                    { label: "Curriculum", done: true },
+                    { label: "Campus Built", done: false },
+                  ]}
+                />
               </div>
             </Link>
           </Reveal>

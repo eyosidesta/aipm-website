@@ -68,8 +68,8 @@ function ProjectDetail() {
           <div className="wrap">
             <Reveal className="section-head">
               <div>
-                <div className="eyebrow">Photos</div>
-                <h2>From the site</h2>
+                <div className="eyebrow">{project.galleryEyebrow || "Photos"}</div>
+                <h2>{project.galleryTitle || "From the site"}</h2>
               </div>
             </Reveal>
             <Reveal>
