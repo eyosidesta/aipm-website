@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { PageHero } from "../../components/Shared/PageHero";
 import Reveal from "../../components/Shared/Reveal";
 import { gather2 } from "../../assets/siteImages";
@@ -7,7 +8,11 @@ import { sendContactMessage } from "../../utils/ApiService/contact.api";
 const INITIAL_FORM = { name: "", phone: "", email: "", reason: "General question", message: "" };
 
 function ContactUs() {
-  const [form, setForm] = useState(INITIAL_FORM);
+  // Links like /contact?reason=prayer pre-select the matching reason.
+  const [searchParams] = useSearchParams();
+  const [form, setForm] = useState(() =>
+    searchParams.get("reason") === "prayer" ? { ...INITIAL_FORM, reason: "Prayer request" } : INITIAL_FORM
+  );
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
   const handleChange = (e) => {

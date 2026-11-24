@@ -53,7 +53,7 @@ function Movements() {
               </strong>{" "}
               &mdash; Hebrews 4:16
             </p>
-            <Link to="/get-involved#prayer-request" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
+            <Link to="/contact?reason=prayer" className="btn btn-outline-ink" style={{ marginTop: 8 }}>
               Submit a Prayer Request &rarr;
             </Link>
           </Reveal>

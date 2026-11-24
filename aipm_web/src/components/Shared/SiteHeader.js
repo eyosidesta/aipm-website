@@ -98,9 +98,6 @@ function SiteHeader() {
             <button className="themetoggle" aria-label="Toggle dark mode" onClick={toggle}>
               {theme === "dark" ? <MoonIcon /> : <SunIcon />}
             </button>
-            <Link to="/get-involved#prayer-request" className="btn btn-ghost">
-              Prayer Request
-            </Link>
             <Link to="/give" className="btn btn-gold">
               Give
             </Link>
@@ -123,17 +120,9 @@ function SiteHeader() {
             </Link>
           ))}
           <Link
-            to="/get-involved#prayer-request"
-            className="btn btn-outline-ink"
-            style={{ marginTop: 10, justifyContent: "center", borderColor: "rgba(251,247,236,0.45)", color: "#FBF7EC" }}
-            onClick={() => setSheetOpen(false)}
-          >
-            Prayer Request
-          </Link>
-          <Link
             to="/give"
             className="btn btn-gold"
-            style={{ justifyContent: "center" }}
+            style={{ marginTop: 10, justifyContent: "center" }}
             onClick={() => setSheetOpen(false)}
           >
             Give

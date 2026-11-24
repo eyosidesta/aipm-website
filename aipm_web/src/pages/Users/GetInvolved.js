@@ -3,6 +3,17 @@ import { Link } from "react-router-dom";
 import { PageHero, SubNav } from "../../components/Shared/PageHero";
 import Reveal from "../../components/Shared/Reveal";
 import { hero } from "../../assets/siteImages";
+import { PROJECTS } from "../../data/projects";
+
+// Projects with real photos, in the same order as the Projects page.
+const FEATURED_PROJECTS = PROJECTS.filter((p) =>
+  ["birhan-building", "global-missions-university", "training", "charity"].includes(p.slug)
+);
+
+// The prayer wall form is not connected to the backend yet, so the section is
+// hidden. Prayer requests go through the Contact form instead. Set to true to
+// show it again once it's wired up.
+const SHOW_PRAYER_WALL = false;
 
 const PRAYER_WALL_SAMPLES = [
   {
@@ -37,7 +48,7 @@ function GetInvolved() {
           { href: "#pray", label: "Pray" },
           { href: "#partner", label: "Partner" },
           { href: "#visit", label: "Visit" },
-          { href: "#prayer-request", label: "Prayer Wall" },
+          ...(SHOW_PRAYER_WALL ? [{ href: "#prayer-request", label: "Prayer Wall" }] : []),
         ]}
       />
 
@@ -51,9 +62,9 @@ function GetInvolved() {
               worshipped there for over 500 years became a Christian. Today, 100,000+ gather every January 19th to
               pray for world evangelization &mdash; and your prayer matters just as much from wherever you are.
             </p>
-            <a href="#prayer-request" className="btn btn-outline-ink">
+            <Link to="/contact?reason=prayer" className="btn btn-outline-ink">
               Submit a Prayer Request
-            </a>
+            </Link>
           </div>
           <div className="waycard" id="partner" style={{ "--i": 1 }}>
             <div className="num">02</div>
@@ -82,6 +93,7 @@ function GetInvolved() {
         </Reveal>
       </section>
 
+      {SHOW_PRAYER_WALL && (
       <section className="alt" id="prayer-request">
         <div className="wrap narrow">
           <Reveal className="section-head">
@@ -139,38 +151,39 @@ function GetInvolved() {
           </Reveal>
         </div>
       </section>
+      )}
 
-      <section>
-        <div className="wrap narrow" style={{ textAlign: "center" }}>
-          <Reveal className="eyebrow">Stay Connected</Reveal>
-          <Reveal as="h2" style={{ marginTop: 10 }}>
-            Register for our newsletter
+      <section id="projects">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <div className="eyebrow">Building the Mountain</div>
+              <h2>Projects you can be part of</h2>
+            </div>
+            <p>
+              <Link to="/projects" className="btn btn-outline-ink">
+                See All Projects &rarr;
+              </Link>
+            </p>
           </Reveal>
-          <Reveal style={{ marginTop: 14, color: "var(--text-soft)" }}>
-            Stay up to date on all happenings with AIPM &mdash; the mountain, the missionaries, and the movement.
-          </Reveal>
-          <Reveal
-            as="form"
-            style={{ marginTop: 24, display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              type="email"
-              placeholder="you@example.com"
-              style={{
-                padding: "13px 16px",
-                borderRadius: 5,
-                border: "1px solid var(--line)",
-                minWidth: 260,
-                fontFamily: "inherit",
-                fontSize: 15,
-                background: "var(--surface)",
-                color: "var(--text)",
-              }}
-            />
-            <button type="submit" className="btn btn-gold">
-              Sign Up
-            </button>
+          <Reveal className="projects-grid" stagger>
+            {FEATURED_PROJECTS.map((project, i) => (
+              <Link
+                key={project.slug}
+                to={`/projects/${project.slug}`}
+                className="project-card"
+                style={{ "--i": i, textDecoration: "none" }}
+              >
+                <div className="img-wrap">
+                  <img src={project.heroImage} alt={project.title} />
+                  <span className="status-pill dot">{project.status}</span>
+                </div>
+                <div className="body">
+                  <h3>{project.title}</h3>
+                  <p>{project.summary}</p>
+                </div>
+              </Link>
+            ))}
           </Reveal>
         </div>
       </section>
@@ -180,7 +193,10 @@ function GetInvolved() {
           <div className="inner">
             <Reveal>
               <h2>Ready to take the next step?</h2>
-              <p>Prayer, partnership or a vision trip &mdash; we&apos;d love to hear from you.</p>
+              <p>
+                Give toward the work, or contact us about prayer, partnership or a January vision trip &mdash;
+                we&apos;d love to hear from you.
+              </p>
             </Reveal>
             <Reveal className="actions">
               <Link to="/give" className="btn btn-gold">

@@ -336,7 +336,7 @@ function Home() {
               <Link to="/give" className="btn btn-gold">
                 Give Now
               </Link>
-              <Link to="/get-involved#prayer-request" className="btn btn-outline-ink">
+              <Link to="/contact?reason=prayer" className="btn btn-outline-ink">
                 Request Prayer
               </Link>
             </Reveal>
