@@ -48,7 +48,7 @@ function GetInvolved() {
             <h3>Pray</h3>
             <p>
               This prayer movement was started on Mount Ambaricho, where a renowned witch doctor whose family was
-              worshipped there for over 700 years became a Christian. Today, 100,000+ gather every January 19th to
+              worshipped there for over 500 years became a Christian. Today, 100,000+ gather every January 19th to
               pray for world evangelization &mdash; and your prayer matters just as much from wherever you are.
             </p>
             <a href="#prayer-request" className="btn btn-outline-ink">

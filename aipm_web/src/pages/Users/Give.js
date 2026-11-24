@@ -64,7 +64,7 @@ function Give() {
             Mission Support
           </div>
           <h1 style={{ color: "#FBF7EC", fontSize: "clamp(32px,5vw,54px)", fontWeight: 600, marginTop: 10, maxWidth: "16ch" }}>
-            Partner with the mountain
+            Partner with AIPM
           </h1>
           <p style={{ color: "#DCE3E6", fontSize: 17, maxWidth: "62ch", marginTop: 16, lineHeight: 1.7 }}>
             AIPM exists to carry out the Ambaricho Prayer and Mission Movement &mdash; prayer, mission, training and

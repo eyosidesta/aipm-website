@@ -31,8 +31,8 @@ function ContactUs() {
       <PageHero img={gather2} eyebrow="Get In Touch" crumb="Contact" title="We'd love to hear from you" />
 
       <section>
-        <Reveal className="wrap" stagger>
-          <div className="loccard" style={{ "--i": 0, maxWidth: 480 }}>
+        <Reveal className="wrap grid2" stagger>
+          <div className="loccard" style={{ "--i": 0 }}>
             <div className="eyebrow">Ethiopia</div>
             <h3>AIPM &mdash; Durame</h3>
             <div className="addr">
@@ -40,6 +40,24 @@ function ContactUs() {
               <br />
               Kambatta Zone, Central Region, Ethiopia
             </div>
+          </div>
+          <div className="loccard" style={{ "--i": 1 }}>
+            <div className="eyebrow">Email &amp; Phone</div>
+            <h3>Reach us directly</h3>
+            <div className="addr">
+              Email:{" "}
+              <a className="link" href="mailto:destalangena7@gmail.com">
+                destalangena7@gmail.com
+              </a>
+              <br />
+              Phone &amp; WhatsApp:{" "}
+              <a className="link" href="tel:+251911827879">
+                +251 911 82 7879
+              </a>
+            </div>
+            <a className="link" href="https://wa.me/251911827879" target="_blank" rel="noopener noreferrer">
+              Message us on WhatsApp &rarr;
+            </a>
           </div>
         </Reveal>
       </section>

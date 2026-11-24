@@ -38,7 +38,7 @@ function Movements() {
             <h2 style={{ marginTop: 10 }}>Pray Without Ceasing</h2>
             <p>
               This incredible prayer movement was started on Mount Ambaricho, the tallest mountain in southern
-              Ethiopia, where a renowned witch doctor whose family was worshipped there for over 700 years became a
+              Ethiopia, where a renowned witch doctor whose family was worshipped there for over 500 years became a
               Christian.
             </p>
             <p>
@@ -65,20 +65,21 @@ function Movements() {
           <Reveal as="figure">
             <img src={origin} alt="A missionary addresses a gathered crowd." />
             <figcaption>
-              <div className="num">470+</div>
-              <div className="txt">Missionaries trained and sent in the last 25 years</div>
+              <div className="num">920+</div>
+              <div className="txt">Missionaries trained and sent in the last 22 years</div>
             </figcaption>
           </Reveal>
           <Reveal className="split-copy">
             <div className="eyebrow">02 &middot; Mission</div>
             <h2 style={{ marginTop: 10 }}>Sent to the hardest places</h2>
             <p>
-              Over the past 25 years, AIPM has trained and sent more than 470 missionaries across Ethiopia. Through a
+              Over the past 22 years, AIPM has trained and sent more than 920 missionaries across Ethiopia. Through a
               firm reliance on prayer, God is using each of them to expand His kingdom across the nation.
             </p>
             <p>
-              AIPM missionaries serve in highly challenging environments &mdash; including armed conflict, global
-              inflation and famine &mdash; remaining faithful and sharing the Gospel with thousands weekly.
+              AIPM missionaries serve in highly challenging environments &mdash; mainly among fanatic and fundamentalist
+              religious groups opposed to the Christian faith, along with armed conflict, national inflation and famine
+              &mdash; remaining faithful and sharing the Gospel with thousands weekly.
             </p>
             <p>
               Missionaries are supported in practical ways too, including AIPM&apos;s own <strong>Chicken Project</strong>{" "}

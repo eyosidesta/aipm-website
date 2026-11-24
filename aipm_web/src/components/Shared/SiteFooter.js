@@ -41,6 +41,8 @@ function SiteFooter() {
               <li><Link to="/projects">Projects</Link></li>
               <li><Link to="/give">Give</Link></li>
               <li><Link to="/contact">Contact</Link></li>
+              <li><a href="mailto:destalangena7@gmail.com">destalangena7@gmail.com</a></li>
+              <li><a href="tel:+251911827879">+251 911 82 7879</a></li>
             </ul>
           </div>
         </div>

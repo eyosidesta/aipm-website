@@ -31,7 +31,7 @@ const MOVEMENTS = [
   {
     to: "/movements#mission",
     title: "Mission",
-    desc: "470+ missionaries trained and sent to unreached peoples across Ethiopia over the past 25 years.",
+    desc: "920+ missionaries trained and sent to unreached peoples across Ethiopia over the past 22 years.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="2" />
@@ -93,7 +93,7 @@ function Home() {
             Now a mountain of <em>prayer.</em>
           </h1>
           <p className="lede">
-            For more than 700 years, Mount Ambaricho was worshipped as the seat of a witchdoctor dynasty. Today, as
+            For more than 500 years, Mount Ambaricho was worshipped as the seat of a witchdoctor dynasty. Today, as
             many as 100,000 believers climb its 3,028&nbsp;metre summit every January&nbsp;19th to fast and pray for
             world evangelism.
           </p>
@@ -140,11 +140,11 @@ function Home() {
               <div className="label">Gather on the mountain every January 19th &mdash; up from just 500</div>
             </div>
             <div className="bstat" style={{ "--i": 2 }}>
-              <div className="num">470+</div>
-              <div className="label">Missionaries trained and sent in the last 25 years</div>
+              <div className="num">920+</div>
+              <div className="label">Missionaries trained and sent in the last 22 years</div>
             </div>
             <div className="bstat wide" style={{ "--i": 3 }}>
-              <div className="num">700+ years of idol worship, now a mountain of prayer</div>
+              <div className="num">500+ years of witchcraft worship, now a mountain of prayer and mission</div>
               <div className="label">The last of the Abba Sarecho witchdoctor dynasty became a follower of Christ</div>
             </div>
           </Reveal>
@@ -164,7 +164,7 @@ function Home() {
             <div className="eyebrow">Our Story</div>
             <h2 style={{ marginTop: 10 }}>From Abba Sarecho&apos;s mountain to God&apos;s mountain</h2>
             <p>
-              For over 700 years, Mount Ambaricho was the seat of a witchdoctor family, Abba Sarecho &mdash;
+              For over 500 years, Mount Ambaricho was the seat of a witchdoctor family, Abba Sarecho &mdash;
               worshipped by tens of thousands who gathered there each year.
             </p>
             <p>
@@ -196,13 +196,13 @@ function Home() {
 
       <section className="founder alt">
         <div className="wrap">
-          <Reveal as="img" src={founder} alt="Dr. Desta Langena Letta, founder of AIPM, with his wife." />
+          <Reveal as="img" src={founder} alt="Dr. Desta Langena Letta, founder of AIPM, with his wife Zenebech Oushe." />
           <Reveal>
             <div className="eyebrow">The Founder</div>
             <blockquote style={{ marginTop: 14 }}>&ldquo;If we pray, God works! If we don&apos;t pray, we work.&rdquo;</blockquote>
             <div className="who">
               <div>
-                <div className="name">Dr. Desta Langena Letta</div>
+                <div className="name">Dr. Desta Langena Letta and his wife Zenebech Oushe</div>
                 <div className="role">Founder &amp; Director, AIPM</div>
               </div>
             </div>
@@ -318,7 +318,7 @@ function Home() {
         <div className="wrap">
           <div className="inner">
             <Reveal>
-              <h2>Partner with the mountain</h2>
+              <h2>Partner with AIPM</h2>
               <p>
                 Supporting a missionary family takes ongoing partnership. Give whatever amount God leads you to
                 &mdash; prayer, mission, training or charity, every gift moves the work forward.
