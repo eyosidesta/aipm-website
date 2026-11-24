@@ -21,6 +21,8 @@ const Contact = db.define('contacts', {
         type: Sequelize.TEXT,
         allowNull: false,
     },
+}, {
+    tableName: 'contactus',
 });
 
 module.exports = Contact;

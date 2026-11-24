@@ -12,6 +12,10 @@ const corsOrigin = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(',').map((origin) => origin.trim())
   : undefined;
 
+// DigitalOcean App Platform sits behind one proxy — trust it so rate limits
+// count each visitor's real IP instead of the proxy's.
+app.set('trust proxy', 1);
+
 app.use(helmet());
 app.use(cors({ origin: corsOrigin }));
 app.use(bodyParser.json());
@@ -38,7 +42,7 @@ db.authenticate().then(() => {
     console.log("db connected...");
     return Contact.sync();
 }).then(() => {
-    console.log("contacts table ready");
+    console.log("contactus table ready");
 }).catch(err => {
     console.log("Error: ", err);
 })

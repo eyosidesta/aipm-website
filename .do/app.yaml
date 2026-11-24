@@ -1,10 +1,15 @@
+# Reference spec for the AIPM API on DigitalOcean App Platform.
+# The app is managed from the DigitalOcean dashboard. Secret values
+# (DATABASE_URL, ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET) are set there as
+# encrypted environment variables and are never stored in this file.
+# The database is Neon (not a DigitalOcean database).
 name: aipm-api
-region: nyc
+region: fra
 services:
   - name: api
     github:
       repo: eyosidesta/aipm-website
-      branch: main
+      branch: master
       deploy_on_push: true
     source_dir: aipm_api
     dockerfile_path: aipm_api/Dockerfile
@@ -18,19 +23,7 @@ services:
         value: production
       - key: DB_SSL
         value: "true"
-      - key: DATABASE_URL
-        value: ${aipm-db.DATABASE_URL}
-        type: SECRET
       - key: CORS_ORIGIN
-        value: https://your-vercel-domain.vercel.app
-      - key: ACCESS_TOKEN_SECRET
-        value: REPLACE_ME
-        type: SECRET
-      - key: REFRESH_TOKEN_SECRET
-        value: REPLACE_ME
-        type: SECRET
-databases:
-  - name: aipm-db
-    engine: PG
-    version: "15"
-    production: false
+        value: https://www.aipmethiopia.com,https://aipmethiopia.com
+      # Set in the dashboard as encrypted (SECRET) values:
+      # DATABASE_URL, ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET
