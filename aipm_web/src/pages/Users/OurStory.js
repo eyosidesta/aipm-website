@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { PageHero, SubNav } from "../../components/Shared/PageHero";
 import Reveal from "../../components/Shared/Reveal";
 import { origin, founder } from "../../assets/siteImages";
+import hailuElias from "../../assets/Team/hailuElias.jpg";
+import amsaluMekonnen from "../../assets/Team/amsaluMekonnen.jpg";
+import tagesseAbo from "../../assets/Team/tagesseAbo.jpg";
+import calebAyele from "../../assets/Team/calebAyele.jpg";
 
 const ACTS = [
   {
@@ -85,14 +89,14 @@ const VALUES = [
   { n: "03", title: "Gospel Advancement", body: "We send equipped disciples to plant churches that will reach the world." },
 ];
 
-// Board member photos are still to come — initials show until each `img` is added.
+// Ato Tesema Melese's photo is still to come — initials show until an `img` is added.
 const TEAM = [
   { initials: null, img: founder, name: "Dr. Desta Langena", role: "Founder and Director" },
-  { initials: "HE", name: "Dr. Hailu Elias", role: "Chairman" },
-  { initials: "AM", name: "Ato Amsalu Mekonnen", role: "Board Member" },
+  { initials: "HE", img: hailuElias, name: "Dr. Hailu Elias", role: "Chairman" },
+  { initials: "AM", img: amsaluMekonnen, name: "Ato Amsalu Mekonnen", role: "Board Member" },
   { initials: "TM", name: "Ato Tesema Melese", role: "Board Member" },
-  { initials: "TA", name: "Dr. Tagesse Abo", role: "Board Member" },
-  { initials: "CA", name: "Caleb Ayele", role: "Coordinator" },
+  { initials: "TA", img: tagesseAbo, name: "Dr. Tagesse Abo", role: "Board Member" },
+  { initials: "CA", img: calebAyele, name: "Pastor Kaleb Ayele", role: "Coordinator" },
 ];
 
 function OurStory() {
