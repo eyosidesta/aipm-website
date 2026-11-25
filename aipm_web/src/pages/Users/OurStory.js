@@ -8,6 +8,7 @@ import amsaluMekonnen from "../../assets/Team/amsaluMekonnen.jpg";
 import tagesseAbo from "../../assets/Team/tagesseAbo.jpg";
 import calebAyele from "../../assets/Team/calebAyele.jpg";
 import destaLangena from "../../assets/Team/destaLangena.jpg";
+import tesemaMelese from "../../assets/Team/tesemaMelese.jpg";
 
 const ACTS = [
   {
@@ -90,12 +91,11 @@ const VALUES = [
   { n: "03", title: "Gospel Advancement", body: "We send equipped disciples to plant churches that will reach the world." },
 ];
 
-// Ato Tesema Melese's photo is still to come — initials show until an `img` is added.
 const TEAM = [
   { initials: "DL", img: destaLangena, name: "Dr. Desta Langena", role: "Founder and Director" },
   { initials: "HE", img: hailuElias, name: "Dr. Hailu Elias", role: "Chairman" },
   { initials: "AM", img: amsaluMekonnen, name: "Ato Amsalu Mekonnen", role: "Board Member" },
-  { initials: "TM", name: "Ato Tesema Melese", role: "Board Member" },
+  { initials: "TM", img: tesemaMelese, name: "Ato Tesema Melese", role: "Board Member" },
   { initials: "TA", img: tagesseAbo, name: "Dr. Tagesse Abo", role: "Board Member" },
   { initials: "CA", img: calebAyele, name: "Pastor Kaleb Ayele", role: "Coordinator" },
 ];
